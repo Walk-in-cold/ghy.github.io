@@ -46,14 +46,13 @@
 <p>分析结果文件的存放与命名方式</p>
 <p>result_ana</p>
 <p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image1.png"></p>
-<h2 id="从界面将基本参数设置"><a href="#从界面将基本参数设置" class="headerlink" title="从界面将基本参数设置"></a>从界面将基本参数设置</h2><p>image2</p>
-<img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image2.png" style="zoom: 67%;">
+<h2 id="从界面将基本参数设置"><a href="#从界面将基本参数设置" class="headerlink" title="从界面将基本参数设置"></a>从界面将基本参数设置</h2><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image2.png" style="zoom: 67%;">
 
-<h2 id="进入工具-》-行为空间-》新建实验"><a href="#进入工具-》-行为空间-》新建实验" class="headerlink" title="进入工具 》 行为空间 》新建实验"></a>进入工具 》 行为空间 》新建实验</h2><p>image3</p>
-<img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image3.png">
+<h2 id="进入工具-》-行为空间-》新建实验"><a href="#进入工具-》-行为空间-》新建实验" class="headerlink" title="进入工具 》 行为空间 》新建实验"></a>进入工具 》 行为空间 》新建实验</h2><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image3.png">
 
-<p>image4</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image4.png">{width=”5.768055555555556in” height=”2.7506944444444446in”}</p>
+
+
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image4.png"></p>
 <h3 id="参数设置-A-区"><a href="#参数设置-A-区" class="headerlink" title="参数设置 A 区"></a>参数设置 A 区</h3><hr>
 <h2 id="quot-n-of-revisions-per-tick-quot-10"><a href="#quot-n-of-revisions-per-tick-quot-10" class="headerlink" title="  [&quot;n-of-revisions-per-tick&quot; 10]"></a>  [&quot;n-of-revisions-per-tick&quot; 10]</h2><p>  [&quot;single-sample?&quot; true]</p>
 <p>  [&quot;tie-breaker&quot; &quot;uniform&quot;]</p>
@@ -81,25 +80,27 @@
 <p>export-plot &quot;Strategy distributions (complete history)&quot; (word &quot;./result_exp202107/&quot; wzj2 &quot;-&quot; K &quot;.csv&quot;)</p>
 <h3 id="输出文件参数设置-C-区"><a href="#输出文件参数设置-C-区" class="headerlink" title="输出文件参数设置 C 区"></a>输出文件参数设置 C 区</h3><p>小型实验用；这里示例是取5策略的值。 可输出全部实验文件到一个csv文件中。</p>
 <h3 id="输出文件参数设置-D-区"><a href="#输出文件参数设置-D-区" class="headerlink" title="输出文件参数设置 D 区"></a>输出文件参数设置 D 区</h3><p>设置Ticks 的值，这里取5万次。 由于update 比例0.2， [&quot;prob-revision&quot; 0.2]； 按照每秒输出一个记录的话，那么，输出应该是 1万条记录</p>
-<h2 id="在”代码”中加入需要输出的变量"><a href="#在”代码”中加入需要输出的变量" class="headerlink" title="在”代码”中加入需要输出的变量"></a>在”代码”中加入需要输出的变量</h2><h3 id="1、添加全局变量"><a href="#1、添加全局变量" class="headerlink" title="1、添加全局变量"></a>1、添加全局变量</h3><p>image5</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image5.png">{width=”5.768055555555556in” height=”4.218055555555556in”}</p>
+<h2 id="在”代码”中加入需要输出的变量"><a href="#在”代码”中加入需要输出的变量" class="headerlink" title="在”代码”中加入需要输出的变量"></a>在”代码”中加入需要输出的变量</h2><h3 id="1、添加全局变量"><a href="#1、添加全局变量" class="headerlink" title="1、添加全局变量"></a>1、添加全局变量</h3><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image5.png"></p>
 <p>;; for experiment outpu</p>
 <p>wzj1 ; pop-1-strategy-frequencies 20210722</p>
 <p>wzj2 ; payoff string 20210722</p>
-<h3 id="2、为添加的变量赋值"><a href="#2、为添加的变量赋值" class="headerlink" title="2、为添加的变量赋值"></a>2、为添加的变量赋值</h3><p>image6</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image6.png">{width=”5.768055555555556in” height=”3.6666666666666665in”}</p>
+<h3 id="2、为添加的变量赋值"><a href="#2、为添加的变量赋值" class="headerlink" title="2、为添加的变量赋值"></a>2、为添加的变量赋值</h3><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image6.png"></p>
 <p>set wzj1 strategy-frequencies</p>
-<p>image7</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image7.png">{width=”5.768055555555556in” height=”3.6555555555555554in”}</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image7.png"></p>
 <p>set wzj2 payoff-matrix</p>
-<h1 id="开始运行"><a href="#开始运行" class="headerlink" title="开始运行"></a>开始运行</h1><p>image8</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image8.png">{width=”4.688155074365704in” height=”3.8234503499562553in”}</p>
+<h1 id="开始运行"><a href="#开始运行" class="headerlink" title="开始运行"></a>开始运行</h1><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image8.png"></p>
 <h2 id="时间：50000-ticks-步-600秒"><a href="#时间：50000-ticks-步-600秒" class="headerlink" title="时间：50000 ticks(步) 600秒"></a>时间：50000 ticks(步) 600秒</h2><h1 id="检查文件"><a href="#检查文件" class="headerlink" title="检查文件"></a>检查文件</h1><p>结果文件名格式</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image9.png">{width=”5.759468503937008in” height=”1.625in”}</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image9.png"></p>
 ]]></content>
       <categories>
         <category>文档</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Welcome!</title>
+    <url>/ghy.github.io/2050/08/02/Welcome/</url>
+    <content><![CDATA[<p>这里是ghy的毕设博客，目前有“文档”与“matlab”两分类，“文档”分类包含每次实验的步骤，实验结果与分析结果，“matlab”分类包含了目前为止实验中所用到的所有matlab代码。</p>
+]]></content>
   </entry>
   <entry>
     <title>batch_process_ana</title>
@@ -109,12 +110,6 @@
       <categories>
         <category>matlab</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Welcome!</title>
-    <url>/ghy.github.io/2050/08/02/Welcome/</url>
-    <content><![CDATA[<p>这里是ghy的毕设博客，目前有“文档”与“matlab”两分类，“文档”分类包含每次实验的步骤，实验结果与分析结果，“matlab”分类包含了目前为止实验中所用到的所有matlab代码。</p>
-]]></content>
   </entry>
   <entry>
     <title>batch_process_expout</title>
@@ -208,6 +203,16 @@ end
       </categories>
   </entry>
   <entry>
+    <title>get_dos_x_t_from_abeddata</title>
+    <url>/ghy.github.io/2021/08/02/get-dos-x-t-from-abeddata/</url>
+    <content><![CDATA[<p>% Programmer: socexp, WZJ, 20210724 simplified, rewrite<br>% Notice: Only for 5 strategy case<br>% Input: abedfilesname, full path and file name<br>% Output: density of state x at time t, 5 column  </p>
+<p>function dos_x_t = get_dos_x_t_from_abeddata(abedfilesname)<br>            [num,txt,raw] = xlsread(abedfilesname);<br>                            t=length(txt(:,1));<br>                            u=raw(t+1:length(raw(:,1)),:);<br>                            v=cell2table(u);<br>                            ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>             dos_x_t = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>end</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
     <title>get_eigensystem_from_5x5</title>
     <url>/ghy.github.io/2021/08/02/get-eigensystem-from-5x5/</url>
     <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  payoff_matrix   — the payoff<br>% Output: eigen_vector,<br>%         d_eigen_value,<br>%         rest_point_no<br>%         of the 5x5 payoff matrix</p>
@@ -240,19 +245,19 @@ end
       </categories>
   </entry>
   <entry>
-    <title>main_of_get_eigen.m</title>
-    <url>/ghy.github.io/2021/08/02/main-of-get-eigen/</url>
-    <content><![CDATA[<p>load(‘E:\毕设\manifold5try.mat’)<br>retM5x5 = get_payoffmatrix_from_index(R,347)<br>[eigen_vector, d_eigen_value, rest_point_no] = get_eigensystem_from_5x5(retM5x5)</p>
+    <title>m716.m</title>
+    <url>/ghy.github.io/2021/08/02/m716/</url>
+    <content><![CDATA[<p>load(‘E:\毕设\manifold20210724try.mat’)<br>riV = [real(V) imag(V)]<br>for k = 1:size(riV,1);riV(k,11)=k; riV(k,12)=riV(k,7)*riV(k,8)*riV(k,9)*riV(k,10) ;end</p>
+<p>%在riV 对本征值和本征向量进行分类</p>
 ]]></content>
       <categories>
         <category>matlab</category>
       </categories>
   </entry>
   <entry>
-    <title>m716.m</title>
-    <url>/ghy.github.io/2021/08/02/m716/</url>
-    <content><![CDATA[<p>load(‘E:\毕设\manifold20210724try.mat’)<br>riV = [real(V) imag(V)]<br>for k = 1:size(riV,1);riV(k,11)=k; riV(k,12)=riV(k,7)*riV(k,8)*riV(k,9)*riV(k,10) ;end</p>
-<p>%在riV 对本征值和本征向量进行分类</p>
+    <title>main_of_get_eigen.m</title>
+    <url>/ghy.github.io/2021/08/02/main-of-get-eigen/</url>
+    <content><![CDATA[<p>load(‘E:\毕设\manifold5try.mat’)<br>retM5x5 = get_payoffmatrix_from_index(R,347)<br>[eigen_vector, d_eigen_value, rest_point_no] = get_eigensystem_from_5x5(retM5x5)</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -270,16 +275,6 @@ coef_coefint3col = [coef coefint];
 resid_residint3col = [resid residint];
 </code></pre>
 <p>end</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>get_dos_x_t_from_abeddata</title>
-    <url>/ghy.github.io/2021/08/02/get-dos-x-t-from-abeddata/</url>
-    <content><![CDATA[<p>% Programmer: socexp, WZJ, 20210724 simplified, rewrite<br>% Notice: Only for 5 strategy case<br>% Input: abedfilesname, full path and file name<br>% Output: density of state x at time t, 5 column  </p>
-<p>function dos_x_t = get_dos_x_t_from_abeddata(abedfilesname)<br>            [num,txt,raw] = xlsread(abedfilesname);<br>                            t=length(txt(:,1));<br>                            u=raw(t+1:length(raw(:,1)),:);<br>                            v=cell2table(u);<br>                            ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>             dos_x_t = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
