@@ -20,21 +20,22 @@
     var CONFIG = {"hostname":"walk-in-cold.github.io","root":"/ghy.github.io/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="批量仿真与批处理仿真数据 参考文件：ABED批量实验方法介绍0723a.docx 使用函数：main_of_get_eigen.m 得到支付矩阵 batch_process_ana.m 调用gdt_integrate_1的主函数 gdt_integrate_1.m 输入存放仿真结果的文件夹，生成mat文件 get_dos_x_t_from_abeddata.m 得到轨迹点 multi_reg_Ea">
+  <meta name="description" content="五策略博弈动力学仿真实验 用到的数据： 分类20210718.xlsx：对其中的双复数数据进行处理，需要处理的数据后有标号，为K列。 manifold5try.mat：存放支付矩阵等数据，共491个五策略支付矩阵，通过main_of_get_eigen.m与对应标号来读取。 用到的函数   函数get_payoffmatrix_from_index   参数R0：所有的支付矩阵 Id：需要的支付矩">
 <meta property="og:type" content="article">
-<meta property="og:title" content="批量仿真与批处理仿真数据">
-<meta property="og:url" content="https://walk-in-cold.github.io/ghy.github.io/2021/07/24/0724-doc/index.html">
+<meta property="og:title" content="“五策略博弈动力学仿真实验”">
+<meta property="og:url" content="https://walk-in-cold.github.io/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/index.html">
 <meta property="og:site_name" content="GHY&#39;s Graduation Project">
-<meta property="og:description" content="批量仿真与批处理仿真数据 参考文件：ABED批量实验方法介绍0723a.docx 使用函数：main_of_get_eigen.m 得到支付矩阵 batch_process_ana.m 调用gdt_integrate_1的主函数 gdt_integrate_1.m 输入存放仿真结果的文件夹，生成mat文件 get_dos_x_t_from_abeddata.m 得到轨迹点 multi_reg_Ea">
+<meta property="og:description" content="五策略博弈动力学仿真实验 用到的数据： 分类20210718.xlsx：对其中的双复数数据进行处理，需要处理的数据后有标号，为K列。 manifold5try.mat：存放支付矩阵等数据，共491个五策略支付矩阵，通过main_of_get_eigen.m与对应标号来读取。 用到的函数   函数get_payoffmatrix_from_index   参数R0：所有的支付矩阵 Id：需要的支付矩">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://walk-in-cold.github.io/ghy.github.io/2021/07/24/0724-doc/imagel1.png">
-<meta property="article:published_time" content="2021-07-23T22:41:23.000Z">
-<meta property="article:modified_time" content="2021-08-01T10:27:37.981Z">
+<meta property="og:image" content="https://walk-in-cold.github.io/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/image1.png">
+<meta property="og:image" content="https://walk-in-cold.github.io/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/image2.png">
+<meta property="article:published_time" content="2021-07-23T10:30:27.000Z">
+<meta property="article:modified_time" content="2021-08-01T10:38:28.713Z">
 <meta property="article:author" content="Jack Guo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://walk-in-cold.github.io/ghy.github.io/2021/07/24/0724-doc/imagel1.png">
+<meta name="twitter:image" content="https://walk-in-cold.github.io/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/image1.png">
 
-<link rel="canonical" href="https://walk-in-cold.github.io/ghy.github.io/2021/07/24/0724-doc/">
+<link rel="canonical" href="https://walk-in-cold.github.io/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/">
 
 
 <script id="page-configurations">
@@ -47,7 +48,7 @@
   };
 </script>
 
-  <title>批量仿真与批处理仿真数据 | GHY's Graduation Project</title>
+  <title>“五策略博弈动力学仿真实验” | GHY's Graduation Project</title>
   
 
 
@@ -195,7 +196,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://walk-in-cold.github.io/ghy.github.io/2021/07/24/0724-doc/">
+    <link itemprop="mainEntityOfPage" href="https://walk-in-cold.github.io/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/ghy.github.io/images/avatar.gif">
@@ -208,7 +209,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          批量仿真与批处理仿真数据
+          “五策略博弈动力学仿真实验”
         </h1>
 
         <div class="post-meta">
@@ -218,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-07-24 06:41:23" itemprop="dateCreated datePublished" datetime="2021-07-24T06:41:23+08:00">2021-07-24</time>
+              <time title="创建时间：2021-07-23 18:30:27" itemprop="dateCreated datePublished" datetime="2021-07-23T18:30:27+08:00">2021-07-23</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-01 18:27:37" itemprop="dateModified" datetime="2021-08-01T18:27:37+08:00">2021-08-01</time>
+                <time title="修改时间：2021-08-01 18:38:28" itemprop="dateModified" datetime="2021-08-01T18:38:28+08:00">2021-08-01</time>
               </span>
 
           
@@ -239,17 +240,182 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>批量仿真与批处理仿真数据</p>
-<p>参考文件：ABED批量实验方法介绍0723a.docx</p>
-<p>使用函数：main_of_get_eigen.m 得到支付矩阵</p>
-<p>batch_process_ana.m 调用gdt_integrate_1的主函数</p>
-<p>gdt_integrate_1.m 输入存放仿真结果的文件夹，生成mat文件</p>
-<p>get_dos_x_t_from_abeddata.m 得到轨迹点</p>
-<p>multi_reg_Eam_Tec.m 对实验值角动量与理论本征圈值多元线性回归</p>
-<p>new_from_N_colExp_out_am.m 对函数做改进，可不传NE参数,主要输出角动量</p>
-<p>new_get_eigensystem_from_5x5.m 输出本征值本征向量，本征圈值以及不动点数</p>
-<p>实验目的：对”分类20210718。xlsx”中的前12个双复数GAME进行批量仿真，并输出仿真结果文件、分析文件。分别保存到E:\abed\abed-1pop-master\result_exp20210724文件夹与E:\abed\abed-1pop-master\result_ana20210724中。</p>
-<p>分析文件（mat）逻辑结构如下。<br><img src="/ghy.github.io/2021/07/24/0724-doc/imagel1.png"></p>
+        <p>五策略博弈动力学仿真实验</p>
+<p>用到的数据：</p>
+<p>分类20210718.xlsx：对其中的双复数数据进行处理，需要处理的数据后有标号，为K列。</p>
+<p>manifold5try.mat：存放支付矩阵等数据，共491个五策略支付矩阵，通过main_of_get_eigen.m与对应标号来读取。</p>
+<p>用到的函数</p>
+<ol>
+<li> 函数get_payoffmatrix_from_index</li>
+</ol>
+<blockquote>
+<p>参数R0：所有的支付矩阵</p>
+<p>Id：需要的支付矩阵序号</p>
+<p>返回对应支付矩阵</p>
+</blockquote>
+<p>% Program: Socexp, WZJ, 20210721</p>
+<p>% Input: R --- the payoff array,</p>
+<p>% id --- the number of the game</p>
+<p>% Output: the 5x5 payoff matrix</p>
+<p>function retM5x5 = get_payoffmatrix_from_index(Ro,id)</p>
+<p>j=(id-1)*5;</p>
+<p>retM5x5 = Ro(j+1:j+5,:);</p>
+<p>end</p>
+<ol start="2">
+<li> 函数get_eigensystem_from_5x5</li>
+</ol>
+<blockquote>
+<p>参数：一个5x5的payoff_matrix</p>
+<p>返回值：</p>
+<p>特征向量，特征值，全非0的点数</p>
+</blockquote>
+<p>% Program: Socexp, WZJ, 20210721</p>
+<p>% Input: payoff_matrix --- the payoff</p>
+<p>% Output: eigen_vector,</p>
+<p>% d_eigen_value,</p>
+<p>% rest_point_no</p>
+<p>% of the 5x5 payoff matrix</p>
+<p>function [eigen_vector, d_eigen_value, rest_point_no] = ...</p>
+<p>get_eigensystem_from_5x5(payoff_matrix)</p>
+<p>eigen_vector=[];</p>
+<p>d_eigen_value=[];</p>
+<p>rest_point_no=1;</p>
+<p>syms x1 x2 x3 x4 x5 real</p>
+<p>Payoff_vector_field_F = payoff_matrix *[x1 x2 x3 x4 x5]&#39;;</p>
+<p>mean_U = [x1 x2 x3 x4 x5] * Payoff_vector_field_F;</p>
+<p>V_Eq_0 = [x1 x2 x3 x4 x5]&#39;.*(Payoff_vector_field_F - mean_U);</p>
+<p>Jac = jacobian(V_Eq_0);</p>
+<p>S=vpasolve(V_Eq_0);</p>
+<p>A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);</p>
+<p>s3=prod(A,2);</p>
+<p>id = find(s3&gt;0);</p>
+<p>if size(id,1)==1</p>
+<p>x1=A(id,1);x2=A(id,2);x3=A(id,3);x4=A(id,4);x5=A(id,5);</p>
+<p>D_Eq_at_NE = eval(Jac);</p>
+<p>[eigen_vector, eigen_value] = eig(D_Eq_at_NE);</p>
+<p>d_eigen_value =diag(eigen_value);</p>
+<p>end</p>
+<p>if size(id,1) &gt; 1</p>
+<p>rest_point_no = size(id,1);</p>
+<p>end</p>
+<p>end</p>
+<ol start="3">
+<li> main_of_get_eigen.m</li>
+</ol>
+<blockquote>
+<p>一个从mat文件到特征向量特征值的实例</p>
+</blockquote>
+<p>load(&#39;E:\\±ÏÉè\\manifold5try.mat&#39;)</p>
+<p>retM5x5 = get_payoffmatrix_from_index(R,438)</p>
+<p>[eigen_vector, d_eigen_value, rest_point_no] = get_eigensystem_from_5x5(retM5x5)</p>
+<ol start="4">
+<li> two_arg_liner.m</li>
+</ol>
+<blockquote>
+<p>双线性回归函数，y为仿真结果的角动量，xx1与xx2分别为两本征圈值。代码中的y与xx1、xx2值为实例，可变。</p>
+</blockquote>
+<p>y=[-1.19788000000000;-8.70448899999997;-2.10510399999999;12.0074730000000;4.42081100000002;-0.738843000000002;-4.87984800000000;3.46149399999998;-7.74517200000005;0.617546999999989];</p>
+<p>xx1=[-0.346113264407322;-0.616584091999450;0.0163114797200060;0.946385876686764;0.0962441121993657;0.0569259014847089;-0.499283278091396;0.105946500563339;-0.626286480363422;0.179183881768053];</p>
+<p>xx2=[-0.528161359506043;0.0512427228146799;0.0714619482946160;0.405456688396747;-0.319121466341176;-0.558440391969341;0.349400498804474;0.0110022522137279;-0.278880995740224;-0.475976191460996]; %wi8i4</p>
+<p>X = [ones(size(y)) xx1 xx2]</p>
+<p>[b,bint,r,rint,stats] = regress(y,X)</p>
+<p>% scatter3(xx1,xx2,y)</p>
+<p>scatter(xx1,y)</p>
+<p>hold on</p>
+<p>% scatter(xx2,y)</p>
+<p>z=b(1)+b(2)*xx1;</p>
+<p>plot(xx1,z,&#39;-r&#39;);</p>
+<p>hold off</p>
+<ol start="5">
+<li> tmp202107021.m</li>
+</ol>
+<blockquote>
+<p>此函数对payoff_matrix进行赋值，得到特征值特征向量以及本征圈，本征圈值存放在Lmn中。</p>
+</blockquote>
+<ol start="6">
+<li> process_expres_to_angluar.m</li>
+</ol>
+<blockquote>
+<p>此函数对实验数据结果csv文件进行处理，得到均值，角动量值等数据。</p>
+</blockquote>
+<p>Game1：</p>
+<p>支付矩阵id292：</p>
+<p>3 2 4 5 1</p>
+<p>1 2 4 5 3</p>
+<p>2 3 5 1 4</p>
+<p>4 2 5 1 3</p>
+<p>4 3 1 5 2</p>
+<p>纳什均衡：0.2 0.2 0.2 0.2 0.2</p>
+<p>仿真结果文件：abed-1pop Strategy distributions (recent history)id292_7-22(2).csv</p>
+<p>本征值：</p>
+<p>实部：-3 0.161399465001705 0.161399465001705 -0.361399465001704 -0.361399465001704</p>
+<p>虚部：0 -0.432654372374283 0.432654372374283 -0.222417523301943 0.222417523301943</p>
+<p>本征圈值：</p>
+<p>xx1(2,3列本征向量)</p>
+<p>-0.346113264407322</p>
+<p>-0.616584091999450</p>
+<p>0.0163114797200060</p>
+<p>0.946385876686764</p>
+<p>0.0962441121993657</p>
+<p>0.0569259014847089</p>
+<p>-0.499283278091396</p>
+<p>0.105946500563339</p>
+<p>-0.626286480363422</p>
+<p>0.179183881768053</p>
+<p>xx2（4,5列本征向量）</p>
+<p>-0.528161359506043</p>
+<p>0.0512427228146799</p>
+<p>0.0714619482946160</p>
+<p>0.405456688396747</p>
+<p>-0.319121466341176</p>
+<p>-0.558440391969341</p>
+<p>0.349400498804474</p>
+<p>0.0110022522137279</p>
+<p>-0.278880995740224</p>
+<p>-0.475976191460996</p>
+<p>仿真实验得到角动量值：</p>
+<p>-1.19788000000000;-8.70448899999997;-2.10510399999999;12.0074730000000;4.42081100000002;-0.738843000000002;-4.87984800000000;3.46149399999998;-7.74517200000005;0.617546999999989</p>
+<p>二元线性回归结果：</p>
+<p>参数b：</p>
+<p>0.329780053048735</p>
+<p>12.2087048196517</p>
+<p>-0.179916914677596</p>
+<p>参数bint：</p>
+<p>-1.48900756502795 2.14856767112542</p>
+<p>8.38171858588976 16.0356910534136</p>
+<p>-5.33061581062000 4.97078198126481</p>
+<p>参数r:</p>
+<p>2.60290946401207</p>
+<p>-1.49735644474596</p>
+<p>-2.62116888086800</p>
+<p>0.196495649407012</p>
+<p>2.85859964084830</p>
+<p>-1.86408745322259</p>
+<p>0.948837170288903</p>
+<p>1.84022388617118</p>
+<p>-0.478980690068974</p>
+<p>-1.98547234182193</p>
+<p>参数rint：</p>
+<p>-1.86382953468874 7.06964846271287</p>
+<p>-6.25318836443262 3.25847547494070</p>
+<p>-7.54343157790447 2.30109381616847</p>
+<p>-2.86268457181694 3.25567587063096</p>
+<p>-1.85059642218542 7.56779570388201</p>
+<p>-6.54481193565432 2.81663702920913</p>
+<p>-3.35599859024104 5.25367293081884</p>
+<p>-3.45368668927343 7.13413446161578</p>
+<p>-5.62761503975707 4.66965365961912</p>
+<p>-6.72076864516395 2.74982396152009</p>
+<p>参数stats：</p>
+<p>0.893933316308013 29.4981090967626 0.000388621179942217 5.14728623302972</p>
+<p>散点图</p>
+<p>角动量关于xx1散点图：</p>
+<p><img src="/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/image1.png"></p>
+<p>角动量关于xx2散点图：</p>
+<p><img src="/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/image2.png"></p>
+<p>分析：</p>
+<p>可发现xx1拟合程度好，效果显著，同时线性回归后xx1系数为12.2，xx2系数为-0.179。xx1本征值实部为正，xx2实部为负，xx1虚部大。</p>
+<p>能级中分布纳什均衡，激发态扰动。</p>
 
     </div>
 
@@ -264,13 +430,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/" rel="prev" title="“五策略博弈动力学仿真实验”">
-      <i class="fa fa-chevron-left"></i> “五策略博弈动力学仿真实验”
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/ghy.github.io/2021/08/02/batch-process-ana/" rel="next" title="batch_process_ana">
-      batch_process_ana <i class="fa fa-chevron-right"></i>
+    <a href="/ghy.github.io/2021/07/24/0724-doc/" rel="next" title="批量仿真与批处理仿真数据">
+      批量仿真与批处理仿真数据 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
