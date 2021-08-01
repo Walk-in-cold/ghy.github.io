@@ -20,6 +20,86 @@
       </categories>
   </entry>
   <entry>
+    <title>ABED批量试验方法介绍0723a</title>
+    <url>/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/</url>
+    <content><![CDATA[<p>ABED批量实验方法介绍（20210723）</p>
+<h1 id="目录-目录-TOC-Heading"><a href="#目录-目录-TOC-Heading" class="headerlink" title="目录 {目录 .TOC-Heading}"></a>目录 {目录 .TOC-Heading}</h1><p><a href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE">实验环境设置 1</a></p>
+<p><a href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%AD%98%E6%94%BE%E8%AF%B4%E6%98%8E">数据文件存放说明 1</a></p>
+<p><a href="#%E4%BB%8E%E7%95%8C%E9%9D%A2%E5%B0%86%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE">从界面将基本参数设置 2</a></p>
+<p><a href="#%E8%BF%9B%E5%85%A5%E5%B7%A5%E5%85%B7-%E8%A1%8C%E4%B8%BA%E7%A9%BA%E9%97%B4-%E6%96%B0%E5%BB%BA%E5%AE%9E%E9%AA%8C">进入工具 》 行为空间 》新建实验 2</a></p>
+<p><a href="#%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-a-%E5%8C%BA">参数设置 A 区 3</a></p>
+<p><a href="#%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-b-%E5%8C%BA">输出文件参数设置 B 区 4</a></p>
+<p><a href="#%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-c-%E5%8C%BA">输出文件参数设置 C 区 4</a></p>
+<p><a href="#%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-d-%E5%8C%BA">输出文件参数设置 D 区 4</a></p>
+<p><a href="#%E5%9C%A8%E4%BB%A3%E7%A0%81%E4%B8%AD%E5%8A%A0%E5%85%A5%E9%9C%80%E8%A6%81%E8%BE%93%E5%87%BA%E7%9A%84%E5%8F%98%E9%87%8F">在”代码”中加入需要输出的变量 5</a></p>
+<p><a href="#%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">1、添加全局变量 5</a></p>
+<p><a href="#%E4%B8%BA%E6%B7%BB%E5%8A%A0%E7%9A%84%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC">2、为添加的变量赋值 6</a></p>
+<p><a href="#%E5%BC%80%E5%A7%8B%E8%BF%90%E8%A1%8C">开始运行 7</a></p>
+<p><a href="#%E6%97%B6%E9%97%B450000-ticks%E6%AD%A5-600%E7%A7%92">时间：50000 ticks(步) 600秒 7</a></p>
+<p><a href="#%E6%A3%80%E6%9F%A5%E6%96%87%E4%BB%B6">检查文件 7</a></p>
+<h1 id="实验环境设置"><a href="#实验环境设置" class="headerlink" title="实验环境设置"></a>实验环境设置</h1><h2 id="数据文件存放说明"><a href="#数据文件存放说明" class="headerlink" title="数据文件存放说明"></a>数据文件存放说明</h2><p>参数文件的存放与命名方式</p>
+<p>parameter</p>
+<p>实验结果文件的存放与命名方式</p>
+<p>result_exp</p>
+<p>实验程序文件的存放与命名方式</p>
+<p>根目录</p>
+<p>分析结果文件的存放与命名方式</p>
+<p>result_ana</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image1.png"></p>
+<h2 id="从界面将基本参数设置"><a href="#从界面将基本参数设置" class="headerlink" title="从界面将基本参数设置"></a>从界面将基本参数设置</h2><p>image2</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage2.png"></p>
+<h2 id="进入工具-》-行为空间-》新建实验"><a href="#进入工具-》-行为空间-》新建实验" class="headerlink" title="进入工具 》 行为空间 》新建实验"></a>进入工具 》 行为空间 》新建实验</h2><p>image3</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage3.png">{width=”3.9472222222222224in” height=”3.053472222222222in”}</p>
+<p>image4</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage4.png">{width=”5.768055555555556in” height=”2.7506944444444446in”}</p>
+<h3 id="参数设置-A-区"><a href="#参数设置-A-区" class="headerlink" title="参数设置 A 区"></a>参数设置 A 区</h3><hr>
+<h2 id="quot-n-of-revisions-per-tick-quot-10"><a href="#quot-n-of-revisions-per-tick-quot-10" class="headerlink" title="  [&quot;n-of-revisions-per-tick&quot; 10]"></a>  [&quot;n-of-revisions-per-tick&quot; 10]</h2><p>  [&quot;single-sample?&quot; true]</p>
+<p>  [&quot;tie-breaker&quot; &quot;uniform&quot;]</p>
+<p>  [&quot;random-initial-condition?&quot; true]</p>
+<p>  [&quot;complete-matching?&quot; true]</p>
+<p>  [&quot;plot-every-?-secs&quot; 1]</p>
+<p>  [&quot;prob-revision&quot; 0.2]</p>
+<p>  [&quot;show-recent-history?&quot; true]</p>
+<p>  [&quot;n-of-trials&quot; 999]</p>
+<p>  [&quot;decision-method&quot; &quot;pairwise-difference&quot;]</p>
+<p>  [&quot;n-of-candidates&quot; 2]</p>
+<p>  [&quot;n-of-agents&quot; 1000]</p>
+<p>  [&quot;trials-with-replacement?&quot; false]</p>
+<p>  [&quot;duration-of-recent&quot; 10]</p>
+<p>  [&quot;initial-condition&quot; &quot;[200 200 200 200 200]&quot;]</p>
+<p>  [&quot;log-noise-level&quot; 0]</p>
+<p>  [&quot;payoff-matrix&quot; &quot;[ [ 2 1 2 3 1 ] [ 4 2 1 -1 3 ] [ 3 4 -1 1 2 ] [ 2 0 4 2 1 ] [ -2 2 3 4 2 ] ]&quot; &quot;[ [ 2 1 2 3 1 ] [ 4 2 1 -1 3 ] [ 3 4 -1 1 2 ] [ 2 0 4 2 1 ] [ -2 2 3 4 2 ] ]&quot; &quot;[ [ 2 1 2 3 4 ] [ 4 2 1 2 3 ] [ 3 4 2 1 2 ] [ 2 3 4 2 1 ] [ 1 2 3 4 2 ] ]&quot; &quot;[ [ 2 1 2 3 7 ] [ 4 2 1 5 3 ] [ 3 4 5 1 2 ] [ 2 6 4 2 1 ] [ 4 2 3 4 2 ] ]&quot;]</p>
+<p>  [&quot;imitatees-with-replacement?&quot; false]</p>
+<p>  [&quot;self-matching?&quot; false]</p>
+<p>  [&quot;show-complete-history?&quot; true]</p>
+<p>  [&quot;consider-imitating-self?&quot; false]</p>
+<p>  [&quot;candidate-selection&quot; &quot;imitative&quot;]</p>
+<p>  [&quot;prob-mutation&quot; 0.01]</p>
+<h2 id="quot-use-prob-revision-quot-true"><a href="#quot-use-prob-revision-quot-true" class="headerlink" title="  [&quot;use-prob-revision?&quot; true]"></a>  [&quot;use-prob-revision?&quot; true]</h2><h3 id="输出文件参数设置-B-区"><a href="#输出文件参数设置-B-区" class="headerlink" title="输出文件参数设置 B 区"></a>输出文件参数设置 B 区</h3><p>let K random-float 1.0</p>
+<p>export-plot &quot;Strategy distributions (complete history)&quot; (word &quot;./result_exp202107/&quot; wzj2 &quot;-&quot; K &quot;.csv&quot;)</p>
+<h3 id="输出文件参数设置-C-区"><a href="#输出文件参数设置-C-区" class="headerlink" title="输出文件参数设置 C 区"></a>输出文件参数设置 C 区</h3><p>小型实验用；这里示例是取5策略的值。 可输出全部实验文件到一个csv文件中。</p>
+<h3 id="输出文件参数设置-D-区"><a href="#输出文件参数设置-D-区" class="headerlink" title="输出文件参数设置 D 区"></a>输出文件参数设置 D 区</h3><p>设置Ticks 的值，这里取5万次。 由于update 比例0.2， [&quot;prob-revision&quot; 0.2]； 按照每秒输出一个记录的话，那么，输出应该是 1万条记录</p>
+<h2 id="在”代码”中加入需要输出的变量"><a href="#在”代码”中加入需要输出的变量" class="headerlink" title="在”代码”中加入需要输出的变量"></a>在”代码”中加入需要输出的变量</h2><h3 id="1、添加全局变量"><a href="#1、添加全局变量" class="headerlink" title="1、添加全局变量"></a>1、添加全局变量</h3><p>image5</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage5.png">{width=”5.768055555555556in” height=”4.218055555555556in”}</p>
+<p>;; for experiment outpu</p>
+<p>wzj1 ; pop-1-strategy-frequencies 20210722</p>
+<p>wzj2 ; payoff string 20210722</p>
+<h3 id="2、为添加的变量赋值"><a href="#2、为添加的变量赋值" class="headerlink" title="2、为添加的变量赋值"></a>2、为添加的变量赋值</h3><p>image6</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage6.png">{width=”5.768055555555556in” height=”3.6666666666666665in”}</p>
+<p>set wzj1 strategy-frequencies</p>
+<p>image7</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage7.png">{width=”5.768055555555556in” height=”3.6555555555555554in”}</p>
+<p>set wzj2 payoff-matrix</p>
+<h1 id="开始运行"><a href="#开始运行" class="headerlink" title="开始运行"></a>开始运行</h1><p>image8</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage8.png">{width=”4.688155074365704in” height=”3.8234503499562553in”}</p>
+<h2 id="时间：50000-ticks-步-600秒"><a href="#时间：50000-ticks-步-600秒" class="headerlink" title="时间：50000 ticks(步) 600秒"></a>时间：50000 ticks(步) 600秒</h2><h1 id="检查文件"><a href="#检查文件" class="headerlink" title="检查文件"></a>检查文件</h1><p>结果文件名格式</p>
+<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image9.png">{width=”5.759468503937008in” height=”1.625in”}</p>
+]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+  </entry>
+  <entry>
     <title>batch_process_ana</title>
     <url>/ghy.github.io/2021/08/02/batch-process-ana/</url>
     <content><![CDATA[<p>%输入实验结果文件，进行分析后结果输出到第二个参数<br>tmp=gdt_integrate_1(‘E:\abed\abed-1pop-master\result_exp20210724’,’E:\abed\abed-1pop-master\result_ana20210724\manifold20210724try.mat’)<br>%file_abedcsv_path=’F:\tmpdata\result_exp202107&#39;;<br> %file_save_mat = ‘manifold20210724try.mat’</p>
@@ -27,6 +107,12 @@
       <categories>
         <category>matlab</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Welcome!</title>
+    <url>/ghy.github.io/2050/08/02/Welcome/</url>
+    <content><![CDATA[<p>这里是ghy的毕设博客，目前有“文档”与“matlab”两分类，“文档”分类包含每次实验的步骤，实验结果与分析结果，“matlab”分类包含了目前为止实验中所用到的所有matlab代码。</p>
+]]></content>
   </entry>
   <entry>
     <title>from_N_colExp_out_am</title>
@@ -38,18 +124,18 @@
       </categories>
   </entry>
   <entry>
-    <title>from_eigenvector_out_am</title>
-    <url>/ghy.github.io/2021/08/02/from-eigenvector-out-am/</url>
-    <content><![CDATA[<p>function [Lmn Tmn]= from_eigenvector_out_am(v)<br>  Ndim=length(v);<br>      Lmn=[];<br>      Tmn=zeros(Ndim);<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>             vm=v(m);<br>             vn=v(n);<br>              area_m_n = abs(vm)*abs(vn)<em>pi</em>sin(angle(vm)-angle(vn));<br>              Lmn=[Lmn; area_m_n];<br>              Tmn(m,n) = area_m_n;<br>              Tmn(n,m) = -area_m_n;<br>         end;<br>    end<br>end</p>
+    <title>batch_process_expout</title>
+    <url>/ghy.github.io/2021/08/02/batch-process-expout/</url>
+    <content><![CDATA[<p>payx5=get_5x5_from_abedExp(‘E:\毕设\abed_1_exp202107\result_exp202107’);</p>
 ]]></content>
       <categories>
         <category>matlab</category>
       </categories>
   </entry>
   <entry>
-    <title>batch_process_expout</title>
-    <url>/ghy.github.io/2021/08/02/batch-process-expout/</url>
-    <content><![CDATA[<p>payx5=get_5x5_from_abedExp(‘E:\毕设\abed_1_exp202107\result_exp202107’);</p>
+    <title>from_eigenvector_out_am</title>
+    <url>/ghy.github.io/2021/08/02/from-eigenvector-out-am/</url>
+    <content><![CDATA[<p>function [Lmn Tmn]= from_eigenvector_out_am(v)<br>  Ndim=length(v);<br>      Lmn=[];<br>      Tmn=zeros(Ndim);<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>             vm=v(m);<br>             vn=v(n);<br>              area_m_n = abs(vm)*abs(vn)<em>pi</em>sin(angle(vm)-angle(vn));<br>              Lmn=[Lmn; area_m_n];<br>              Tmn(m,n) = area_m_n;<br>              Tmn(n,m) = -area_m_n;<br>         end;<br>    end<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -153,25 +239,6 @@ end
       </categories>
   </entry>
   <entry>
-    <title>get_payoffmatrix_from_index</title>
-    <url>/ghy.github.io/2021/08/02/get-payoffmatrix-from-index/</url>
-    <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  R   — the payoff array,<br>%        id   — the number of the game<br>% Output: the 5x5 payoff matrix<br>function retM5x5 = get_payoffmatrix_from_index(Ro,id)<br>    j=(id-1)*5;<br>    retM5x5 = Ro(j+1:j+5,:);<br>end</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>m716.m</title>
-    <url>/ghy.github.io/2021/08/02/m716/</url>
-    <content><![CDATA[<p>load(‘E:\毕设\manifold20210724try.mat’)<br>riV = [real(V) imag(V)]<br>for k = 1:size(riV,1);riV(k,11)=k; riV(k,12)=riV(k,7)*riV(k,8)*riV(k,9)*riV(k,10) ;end</p>
-<p>%在riV 对本征值和本征向量进行分类</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
     <title>multi_reg_Eam_Tec</title>
     <url>/ghy.github.io/2021/08/02/multi-reg-Eam-Tec/</url>
     <content><![CDATA[<p>% Programmer: socexp, WZJ, rewrite 20210723<br>% Input: Tec – Theoretical predictor, eigencycle<br>%        Eam – Abed experiment angular momentum<br>% Output: multi linear regression results<br>%          coef_coefint3col – the coefficient, 95% confidence intervals<br>%                    for the coefficient estimates. 6 raws 3 column<br>%          resid_residint3col – the residual, 95% confidence intervals<br>%                    for the residuals estimates. 6 rows 3 column<br>%          R2_F_p_evar – the R2 statistic, the F statistic<br>%                     and its p value, and an estimate<br>%                     of the error variance. 1 row 4 column<br>function [coef_coefint3col,resid_residint3col,R2_F_p_evar] = …<br>                       multi_reg_Eam_Tec(Eam,Tec)</p>
@@ -198,9 +265,19 @@ resid_residint3col = [resid residint];
       </categories>
   </entry>
   <entry>
-    <title>new_from_N_colExp_out_am</title>
-    <url>/ghy.github.io/2021/08/02/new-from-N-colExp-out-am/</url>
-    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t, mean_x,std_x] = new_from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>       if nargin &lt; 2<br>           NE = mean(dos_x_t);<br>       end<br>       mean_x = NE;<br>       std_x =  std(dos_x_t);<br>         Ndim=length(dos_x_t(1,:));<br>        sum_am_rr=[];<br>        inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
+    <title>m716.m</title>
+    <url>/ghy.github.io/2021/08/02/m716/</url>
+    <content><![CDATA[<p>load(‘E:\毕设\manifold20210724try.mat’)<br>riV = [real(V) imag(V)]<br>for k = 1:size(riV,1);riV(k,11)=k; riV(k,12)=riV(k,7)*riV(k,8)*riV(k,9)*riV(k,10) ;end</p>
+<p>%在riV 对本征值和本征向量进行分类</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>get_payoffmatrix_from_index</title>
+    <url>/ghy.github.io/2021/08/02/get-payoffmatrix-from-index/</url>
+    <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  R   — the payoff array,<br>%        id   — the number of the game<br>% Output: the 5x5 payoff matrix<br>function retM5x5 = get_payoffmatrix_from_index(Ro,id)<br>    j=(id-1)*5;<br>    retM5x5 = Ro(j+1:j+5,:);<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -234,9 +311,9 @@ resid_residint3col = [resid residint];
       </categories>
   </entry>
   <entry>
-    <title>process_express_to_angluar</title>
-    <url>/ghy.github.io/2021/08/02/process-express-to-angluar/</url>
-    <content><![CDATA[<p>abedfilesname = ‘abed-1pop Strategy distributions (recent history)id292_7-22(2).csv’;<br>[num,txt,raw] = xlsread(abedfilesname);<br>t=length(txt(:,1));<br>u=raw(t+1:length(raw(:,1)),:);<br>v=cell2table(u);<br>ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>psd = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>abed_mean=mean(psd)<br>NE =  [[0.2,0.2,0.2,0.2,0.2]]<br>abed_angluar_momentum = from_N_colExp_out_am(psd,NE)</p>
+    <title>new_from_N_colExp_out_am</title>
+    <url>/ghy.github.io/2021/08/02/new-from-N-colExp-out-am/</url>
+    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t, mean_x,std_x] = new_from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>       if nargin &lt; 2<br>           NE = mean(dos_x_t);<br>       end<br>       mean_x = NE;<br>       std_x =  std(dos_x_t);<br>         Ndim=length(dos_x_t(1,:));<br>        sum_am_rr=[];<br>        inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -254,6 +331,15 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
             x1=A(id,1); x2=A(id,2); x3=A(id,3); x4=A(id,4); x5=A(id,5); 
 </code></pre>
 <p>%                 x1=0.2; x2=0.2; x3=0.2; x4=0.2; x5=0.2;<br>                Jac_at_NE = eval(Jac)<br>                [eigen_vector eigen_value] = eig(Jac_at_NE)<br>%                           R=[R; payoff_matrix];<br>%                           V=[V; diag(eigen_value)’];<br>% %                           Ne=[Ne; s];<br>%                   figure<br>%                 v=diag(eigen_vector(:,1));hold on<br>%                 quiver([1:5]’*0,[1:5]’*0,real(v),imag(v),1)<br>%                 text(real(v)*1.05,imag(v)<em>1.05, num2str([1:5]’),’fontsize’,15);axis square;<br>         end<br>% end<br>        v = eigen_vector(:,3)<br>        [Lmn Tmn]= from_eigenvector_out_am(v)<br>% save(‘manifold5try.mat’, ‘R’,’V’,’Ne’ )<br>t=0:0.1:30<br>x=v</em>exp(0.4294i *t);<br>xr=real(x)’;<br>plot(xr,’DisplayName’,’xr’)<br>scatter(xr(:,1),xr(:,2),’.’)</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>process_express_to_angluar</title>
+    <url>/ghy.github.io/2021/08/02/process-express-to-angluar/</url>
+    <content><![CDATA[<p>abedfilesname = ‘abed-1pop Strategy distributions (recent history)id292_7-22(2).csv’;<br>[num,txt,raw] = xlsread(abedfilesname);<br>t=length(txt(:,1));<br>u=raw(t+1:length(raw(:,1)),:);<br>v=cell2table(u);<br>ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>psd = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>abed_mean=mean(psd)<br>NE =  [[0.2,0.2,0.2,0.2,0.2]]<br>abed_angluar_momentum = from_N_colExp_out_am(psd,NE)</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -448,6 +534,17 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>分析：</p>
 <p>可发现xx1拟合程度好，效果显著，同时线性回归后xx1系数为12.2，xx2系数为-0.179。xx1本征值实部为正，xx2实部为负，xx1虚部大。</p>
 <p>能级中分布纳什均衡，激发态扰动。</p>
+]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>参考阅读</title>
+    <url>/ghy.github.io/2021/08/02/%E5%8F%82%E8%80%83%E9%98%85%E8%AF%BB/</url>
+    <content><![CDATA[<p>五策略博弈例子的文献基础    8.1.2. Cyclic Decomposition 【定性分析】<br><a href="https://www.mdpi.com/2073-4336/9/2/31/htm#B216-games-09-00031">https://www.mdpi.com/2073-4336/9/2/31/htm#B216-games-09-00031</a></p>
+<p><a href="https://www.technologyreview.com/2014/04/30/13423/how-to-win-at-rock-paper-scissors/">https://www.technologyreview.com/2014/04/30/13423/how-to-win-at-rock-paper-scissors/</a></p>
+<p><a href="https://www.nature.com/articles/srep08817">https://www.nature.com/articles/srep08817</a></p>
 ]]></content>
       <categories>
         <category>文档</category>
@@ -1382,96 +1479,6 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  0.208062   0.208062   -0.30806   -0.30806   0     -0.4072    0.407203   -0.5219    0.521898   477</p>
 <p>  -0.25958   -0.25958   0.359576   0.359576   0     -0.27132   0.271316   -0.37824   0.378235   479</p>
 <h2 id="0-196817-0-196817-0-19682-0-19682-0-0-0926-0-092603-0-17-0-169996-489"><a href="#0-196817-0-196817-0-19682-0-19682-0-0-0926-0-092603-0-17-0-169996-489" class="headerlink" title="  0.196817   0.196817   -0.19682   -0.19682   0     -0.0926    0.092603   -0.17      0.169996   489"></a>  0.196817   0.196817   -0.19682   -0.19682   0     -0.0926    0.092603   -0.17      0.169996   489</h2><p>问题：分量本征值的虚部部分会产生角度以及螺旋轨迹，但是分量本身已经代表了方向，那么分量自己的相位有什么意义</p>
-]]></content>
-      <categories>
-        <category>文档</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ABED批量试验方法介绍0723a</title>
-    <url>/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/</url>
-    <content><![CDATA[<p>ABED批量实验方法介绍（20210723）</p>
-<h1 id="目录-目录-TOC-Heading"><a href="#目录-目录-TOC-Heading" class="headerlink" title="目录 {目录 .TOC-Heading}"></a>目录 {目录 .TOC-Heading}</h1><p><a href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE">实验环境设置 1</a></p>
-<p><a href="#%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%AD%98%E6%94%BE%E8%AF%B4%E6%98%8E">数据文件存放说明 1</a></p>
-<p><a href="#%E4%BB%8E%E7%95%8C%E9%9D%A2%E5%B0%86%E5%9F%BA%E6%9C%AC%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE">从界面将基本参数设置 2</a></p>
-<p><a href="#%E8%BF%9B%E5%85%A5%E5%B7%A5%E5%85%B7-%E8%A1%8C%E4%B8%BA%E7%A9%BA%E9%97%B4-%E6%96%B0%E5%BB%BA%E5%AE%9E%E9%AA%8C">进入工具 》 行为空间 》新建实验 2</a></p>
-<p><a href="#%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-a-%E5%8C%BA">参数设置 A 区 3</a></p>
-<p><a href="#%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-b-%E5%8C%BA">输出文件参数设置 B 区 4</a></p>
-<p><a href="#%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-c-%E5%8C%BA">输出文件参数设置 C 区 4</a></p>
-<p><a href="#%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE-d-%E5%8C%BA">输出文件参数设置 D 区 4</a></p>
-<p><a href="#%E5%9C%A8%E4%BB%A3%E7%A0%81%E4%B8%AD%E5%8A%A0%E5%85%A5%E9%9C%80%E8%A6%81%E8%BE%93%E5%87%BA%E7%9A%84%E5%8F%98%E9%87%8F">在”代码”中加入需要输出的变量 5</a></p>
-<p><a href="#%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">1、添加全局变量 5</a></p>
-<p><a href="#%E4%B8%BA%E6%B7%BB%E5%8A%A0%E7%9A%84%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC">2、为添加的变量赋值 6</a></p>
-<p><a href="#%E5%BC%80%E5%A7%8B%E8%BF%90%E8%A1%8C">开始运行 7</a></p>
-<p><a href="#%E6%97%B6%E9%97%B450000-ticks%E6%AD%A5-600%E7%A7%92">时间：50000 ticks(步) 600秒 7</a></p>
-<p><a href="#%E6%A3%80%E6%9F%A5%E6%96%87%E4%BB%B6">检查文件 7</a></p>
-<h1 id="实验环境设置"><a href="#实验环境设置" class="headerlink" title="实验环境设置"></a>实验环境设置</h1><h2 id="数据文件存放说明"><a href="#数据文件存放说明" class="headerlink" title="数据文件存放说明"></a>数据文件存放说明</h2><p>参数文件的存放与命名方式</p>
-<p>parameter</p>
-<p>实验结果文件的存放与命名方式</p>
-<p>result_exp</p>
-<p>实验程序文件的存放与命名方式</p>
-<p>根目录</p>
-<p>分析结果文件的存放与命名方式</p>
-<p>result_ana</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image1.png"></p>
-<h2 id="从界面将基本参数设置"><a href="#从界面将基本参数设置" class="headerlink" title="从界面将基本参数设置"></a>从界面将基本参数设置</h2><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage2.png"></p>
-<h2 id="进入工具-》-行为空间-》新建实验"><a href="#进入工具-》-行为空间-》新建实验" class="headerlink" title="进入工具 》 行为空间 》新建实验"></a>进入工具 》 行为空间 》新建实验</h2><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage3.png">{width=”3.9472222222222224in” height=”3.053472222222222in”}</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage4.png">{width=”5.768055555555556in” height=”2.7506944444444446in”}</p>
-<h3 id="参数设置-A-区"><a href="#参数设置-A-区" class="headerlink" title="参数设置 A 区"></a>参数设置 A 区</h3><hr>
-<h2 id="quot-n-of-revisions-per-tick-quot-10"><a href="#quot-n-of-revisions-per-tick-quot-10" class="headerlink" title="  [&quot;n-of-revisions-per-tick&quot; 10]"></a>  [&quot;n-of-revisions-per-tick&quot; 10]</h2><p>  [&quot;single-sample?&quot; true]</p>
-<p>  [&quot;tie-breaker&quot; &quot;uniform&quot;]</p>
-<p>  [&quot;random-initial-condition?&quot; true]</p>
-<p>  [&quot;complete-matching?&quot; true]</p>
-<p>  [&quot;plot-every-?-secs&quot; 1]</p>
-<p>  [&quot;prob-revision&quot; 0.2]</p>
-<p>  [&quot;show-recent-history?&quot; true]</p>
-<p>  [&quot;n-of-trials&quot; 999]</p>
-<p>  [&quot;decision-method&quot; &quot;pairwise-difference&quot;]</p>
-<p>  [&quot;n-of-candidates&quot; 2]</p>
-<p>  [&quot;n-of-agents&quot; 1000]</p>
-<p>  [&quot;trials-with-replacement?&quot; false]</p>
-<p>  [&quot;duration-of-recent&quot; 10]</p>
-<p>  [&quot;initial-condition&quot; &quot;[200 200 200 200 200]&quot;]</p>
-<p>  [&quot;log-noise-level&quot; 0]</p>
-<p>  [&quot;payoff-matrix&quot; &quot;[ [ 2 1 2 3 1 ] [ 4 2 1 -1 3 ] [ 3 4 -1 1 2 ] [ 2 0 4 2 1 ] [ -2 2 3 4 2 ] ]&quot; &quot;[ [ 2 1 2 3 1 ] [ 4 2 1 -1 3 ] [ 3 4 -1 1 2 ] [ 2 0 4 2 1 ] [ -2 2 3 4 2 ] ]&quot; &quot;[ [ 2 1 2 3 4 ] [ 4 2 1 2 3 ] [ 3 4 2 1 2 ] [ 2 3 4 2 1 ] [ 1 2 3 4 2 ] ]&quot; &quot;[ [ 2 1 2 3 7 ] [ 4 2 1 5 3 ] [ 3 4 5 1 2 ] [ 2 6 4 2 1 ] [ 4 2 3 4 2 ] ]&quot;]</p>
-<p>  [&quot;imitatees-with-replacement?&quot; false]</p>
-<p>  [&quot;self-matching?&quot; false]</p>
-<p>  [&quot;show-complete-history?&quot; true]</p>
-<p>  [&quot;consider-imitating-self?&quot; false]</p>
-<p>  [&quot;candidate-selection&quot; &quot;imitative&quot;]</p>
-<p>  [&quot;prob-mutation&quot; 0.01]</p>
-<h2 id="quot-use-prob-revision-quot-true"><a href="#quot-use-prob-revision-quot-true" class="headerlink" title="  [&quot;use-prob-revision?&quot; true]"></a>  [&quot;use-prob-revision?&quot; true]</h2><h3 id="输出文件参数设置-B-区"><a href="#输出文件参数设置-B-区" class="headerlink" title="输出文件参数设置 B 区"></a>输出文件参数设置 B 区</h3><p>let K random-float 1.0</p>
-<p>export-plot &quot;Strategy distributions (complete history)&quot; (word &quot;./result_exp202107/&quot; wzj2 &quot;-&quot; K &quot;.csv&quot;)</p>
-<h3 id="输出文件参数设置-C-区"><a href="#输出文件参数设置-C-区" class="headerlink" title="输出文件参数设置 C 区"></a>输出文件参数设置 C 区</h3><p>小型实验用；这里示例是取5策略的值。 可输出全部实验文件到一个csv文件中。</p>
-<h3 id="输出文件参数设置-D-区"><a href="#输出文件参数设置-D-区" class="headerlink" title="输出文件参数设置 D 区"></a>输出文件参数设置 D 区</h3><p>设置Ticks 的值，这里取5万次。 由于update 比例0.2， [&quot;prob-revision&quot; 0.2]； 按照每秒输出一个记录的话，那么，输出应该是 1万条记录</p>
-<h2 id="在”代码”中加入需要输出的变量"><a href="#在”代码”中加入需要输出的变量" class="headerlink" title="在”代码”中加入需要输出的变量"></a>在”代码”中加入需要输出的变量</h2><h3 id="1、添加全局变量"><a href="#1、添加全局变量" class="headerlink" title="1、添加全局变量"></a>1、添加全局变量</h3><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage5.png">{width=”5.768055555555556in” height=”4.218055555555556in”}</p>
-<p>;; for experiment outpu</p>
-<p>wzj1 ; pop-1-strategy-frequencies 20210722</p>
-<p>wzj2 ; payoff string 20210722</p>
-<h3 id="2、为添加的变量赋值"><a href="#2、为添加的变量赋值" class="headerlink" title="2、为添加的变量赋值"></a>2、为添加的变量赋值</h3><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage6.png">{width=”5.768055555555556in” height=”3.6666666666666665in”}</p>
-<p>set wzj1 strategy-frequencies</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage7.png">{width=”5.768055555555556in” height=”3.6555555555555554in”}</p>
-<p>set wzj2 payoff-matrix</p>
-<h1 id="开始运行"><a href="#开始运行" class="headerlink" title="开始运行"></a>开始运行</h1><p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a%5Cimage8.png">{width=”4.688155074365704in” height=”3.8234503499562553in”}</p>
-<h2 id="时间：50000-ticks-步-600秒"><a href="#时间：50000-ticks-步-600秒" class="headerlink" title="时间：50000 ticks(步) 600秒"></a>时间：50000 ticks(步) 600秒</h2><h1 id="检查文件"><a href="#检查文件" class="headerlink" title="检查文件"></a>检查文件</h1><p>结果文件名格式</p>
-<p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image9.png">{width=”5.759468503937008in” height=”1.625in”}</p>
-]]></content>
-      <categories>
-        <category>文档</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Welcome!</title>
-    <url>/ghy.github.io/2050/08/02/Welcome/</url>
-    <content><![CDATA[<p>这里是ghy的毕设博客，目前有“文档”与“matlab”两分类，“文档”分类包含每次实验的步骤，实验结果与分析结果，“matlab”分类包含了目前为止实验中所用到的所有matlab代码。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>参考阅读</title>
-    <url>/ghy.github.io/2021/08/02/%E5%8F%82%E8%80%83%E9%98%85%E8%AF%BB/</url>
-    <content><![CDATA[<p>五策略博弈例子的文献基础    8.1.2. Cyclic Decomposition 【定性分析】<br><a href="https://www.mdpi.com/2073-4336/9/2/31/htm#B216-games-09-00031">https://www.mdpi.com/2073-4336/9/2/31/htm#B216-games-09-00031</a></p>
-<p><a href="https://www.technologyreview.com/2014/04/30/13423/how-to-win-at-rock-paper-scissors/">https://www.technologyreview.com/2014/04/30/13423/how-to-win-at-rock-paper-scissors/</a></p>
-<p><a href="https://www.nature.com/articles/srep08817">https://www.nature.com/articles/srep08817</a></p>
 ]]></content>
       <categories>
         <category>文档</category>
