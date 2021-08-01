@@ -1460,4 +1460,21 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
         <category>文档</category>
       </categories>
   </entry>
+  <entry>
+    <title>Welcome!</title>
+    <url>/ghy.github.io/2050/08/02/Welcome/</url>
+    <content><![CDATA[<p>这里是ghy的毕设博客，目前有“文档”与“matlab”两分类，“文档”分类包含每次实验的步骤，实验结果与分析结果，“matlab”分类包含了目前为止实验中所用到的所有matlab代码。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>参考阅读</title>
+    <url>/ghy.github.io/2021/08/02/%E5%8F%82%E8%80%83%E9%98%85%E8%AF%BB/</url>
+    <content><![CDATA[<p>五策略博弈例子的文献基础    8.1.2. Cyclic Decomposition 【定性分析】<br><a href="https://www.mdpi.com/2073-4336/9/2/31/htm#B216-games-09-00031">https://www.mdpi.com/2073-4336/9/2/31/htm#B216-games-09-00031</a></p>
+<p><a href="https://www.technologyreview.com/2014/04/30/13423/how-to-win-at-rock-paper-scissors/">https://www.technologyreview.com/2014/04/30/13423/how-to-win-at-rock-paper-scissors/</a></p>
+<p><a href="https://www.nature.com/articles/srep08817">https://www.nature.com/articles/srep08817</a></p>
+]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+  </entry>
 </search>
