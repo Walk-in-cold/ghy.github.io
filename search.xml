@@ -15,6 +15,9 @@
 <p>实验目的：对”分类20210718。xlsx”中的前12个双复数GAME进行批量仿真，并输出仿真结果文件、分析文件。分别保存到E:\abed\abed-1pop-master\result_exp20210724文件夹与E:\abed\abed-1pop-master\result_ana20210724中。</p>
 <p>分析文件（mat）逻辑结构如下。<br><img src="/ghy.github.io/2021/07/24/0724-doc/imagel1.png"></p>
 ]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
   </entry>
   <entry>
     <title>batch_process_ana</title>
@@ -35,18 +38,18 @@
       </categories>
   </entry>
   <entry>
-    <title>batch_process_expout</title>
-    <url>/ghy.github.io/2021/08/02/batch-process-expout/</url>
-    <content><![CDATA[<p>payx5=get_5x5_from_abedExp(‘E:\毕设\abed_1_exp202107\result_exp202107’);</p>
+    <title>from_eigenvector_out_am</title>
+    <url>/ghy.github.io/2021/08/02/from-eigenvector-out-am/</url>
+    <content><![CDATA[<p>function [Lmn Tmn]= from_eigenvector_out_am(v)<br>  Ndim=length(v);<br>      Lmn=[];<br>      Tmn=zeros(Ndim);<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>             vm=v(m);<br>             vn=v(n);<br>              area_m_n = abs(vm)*abs(vn)<em>pi</em>sin(angle(vm)-angle(vn));<br>              Lmn=[Lmn; area_m_n];<br>              Tmn(m,n) = area_m_n;<br>              Tmn(n,m) = -area_m_n;<br>         end;<br>    end<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
       </categories>
   </entry>
   <entry>
-    <title>from_eigenvector_out_am</title>
-    <url>/ghy.github.io/2021/08/02/from-eigenvector-out-am/</url>
-    <content><![CDATA[<p>function [Lmn Tmn]= from_eigenvector_out_am(v)<br>  Ndim=length(v);<br>      Lmn=[];<br>      Tmn=zeros(Ndim);<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>             vm=v(m);<br>             vn=v(n);<br>              area_m_n = abs(vm)*abs(vn)<em>pi</em>sin(angle(vm)-angle(vn));<br>              Lmn=[Lmn; area_m_n];<br>              Tmn(m,n) = area_m_n;<br>              Tmn(n,m) = -area_m_n;<br>         end;<br>    end<br>end</p>
+    <title>batch_process_expout</title>
+    <url>/ghy.github.io/2021/08/02/batch-process-expout/</url>
+    <content><![CDATA[<p>payx5=get_5x5_from_abedExp(‘E:\毕设\abed_1_exp202107\result_exp202107’);</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -117,6 +120,16 @@ end
       </categories>
   </entry>
   <entry>
+    <title>get_dos_x_t_from_abeddata</title>
+    <url>/ghy.github.io/2021/08/02/get-dos-x-t-from-abeddata/</url>
+    <content><![CDATA[<p>% Programmer: socexp, WZJ, 20210724 simplified, rewrite<br>% Notice: Only for 5 strategy case<br>% Input: abedfilesname, full path and file name<br>% Output: density of state x at time t, 5 column  </p>
+<p>function dos_x_t = get_dos_x_t_from_abeddata(abedfilesname)<br>            [num,txt,raw] = xlsread(abedfilesname);<br>                            t=length(txt(:,1));<br>                            u=raw(t+1:length(raw(:,1)),:);<br>                            v=cell2table(u);<br>                            ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>             dos_x_t = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>end</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
     <title>get_eigensystem_from_5x5</title>
     <url>/ghy.github.io/2021/08/02/get-eigensystem-from-5x5/</url>
     <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  payoff_matrix   — the payoff<br>% Output: eigen_vector,<br>%         d_eigen_value,<br>%         rest_point_no<br>%         of the 5x5 payoff matrix</p>
@@ -134,16 +147,6 @@ end
         end
 </code></pre>
 <p>end</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>get_dos_x_t_from_abeddata</title>
-    <url>/ghy.github.io/2021/08/02/get-dos-x-t-from-abeddata/</url>
-    <content><![CDATA[<p>% Programmer: socexp, WZJ, 20210724 simplified, rewrite<br>% Notice: Only for 5 strategy case<br>% Input: abedfilesname, full path and file name<br>% Output: density of state x at time t, 5 column  </p>
-<p>function dos_x_t = get_dos_x_t_from_abeddata(abedfilesname)<br>            [num,txt,raw] = xlsread(abedfilesname);<br>                            t=length(txt(:,1));<br>                            u=raw(t+1:length(raw(:,1)),:);<br>                            v=cell2table(u);<br>                            ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>             dos_x_t = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -169,15 +172,6 @@ end
       </categories>
   </entry>
   <entry>
-    <title>main_of_get_eigen.m</title>
-    <url>/ghy.github.io/2021/08/02/main-of-get-eigen/</url>
-    <content><![CDATA[<p>load(‘E:\毕设\manifold5try.mat’)<br>retM5x5 = get_payoffmatrix_from_index(R,347)<br>[eigen_vector, d_eigen_value, rest_point_no] = get_eigensystem_from_5x5(retM5x5)</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
     <title>multi_reg_Eam_Tec</title>
     <url>/ghy.github.io/2021/08/02/multi-reg-Eam-Tec/</url>
     <content><![CDATA[<p>% Programmer: socexp, WZJ, rewrite 20210723<br>% Input: Tec – Theoretical predictor, eigencycle<br>%        Eam – Abed experiment angular momentum<br>% Output: multi linear regression results<br>%          coef_coefint3col – the coefficient, 95% confidence intervals<br>%                    for the coefficient estimates. 6 raws 3 column<br>%          resid_residint3col – the residual, 95% confidence intervals<br>%                    for the residuals estimates. 6 rows 3 column<br>%          R2_F_p_evar – the R2 statistic, the F statistic<br>%                     and its p value, and an estimate<br>%                     of the error variance. 1 row 4 column<br>function [coef_coefint3col,resid_residint3col,R2_F_p_evar] = …<br>                       multi_reg_Eam_Tec(Eam,Tec)</p>
@@ -189,6 +183,24 @@ coef_coefint3col = [coef coefint];
 resid_residint3col = [resid residint];
 </code></pre>
 <p>end</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>main_of_get_eigen.m</title>
+    <url>/ghy.github.io/2021/08/02/main-of-get-eigen/</url>
+    <content><![CDATA[<p>load(‘E:\毕设\manifold5try.mat’)<br>retM5x5 = get_payoffmatrix_from_index(R,347)<br>[eigen_vector, d_eigen_value, rest_point_no] = get_eigensystem_from_5x5(retM5x5)</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>new_from_N_colExp_out_am</title>
+    <url>/ghy.github.io/2021/08/02/new-from-N-colExp-out-am/</url>
+    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t, mean_x,std_x] = new_from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>       if nargin &lt; 2<br>           NE = mean(dos_x_t);<br>       end<br>       mean_x = NE;<br>       std_x =  std(dos_x_t);<br>         Ndim=length(dos_x_t(1,:));<br>        sum_am_rr=[];<br>        inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -216,15 +228,6 @@ resid_residint3col = [resid residint];
     end
 </code></pre>
 <p>end</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>new_from_N_colExp_out_am</title>
-    <url>/ghy.github.io/2021/08/02/new-from-N-colExp-out-am/</url>
-    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t, mean_x,std_x] = new_from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>       if nargin &lt; 2<br>           NE = mean(dos_x_t);<br>       end<br>       mean_x = NE;<br>       std_x =  std(dos_x_t);<br>         Ndim=length(dos_x_t(1,:));<br>        sum_am_rr=[];<br>        inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -446,13 +449,361 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>可发现xx1拟合程度好，效果显著，同时线性回归后xx1系数为12.2，xx2系数为-0.179。xx1本征值实部为正，xx2实部为负，xx1虚部大。</p>
 <p>能级中分布纳什均衡，激发态扰动。</p>
 ]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>测试安装结果20210714郭</title>
+    <url>/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/</url>
+    <content><![CDATA[<p><strong>测试安装结果20210714 郭</strong></p>
+<p><strong>五策略博弈动力学Replicator仿真实验</strong></p>
+<p><strong>仿真实验界面</strong></p>
+<p>利用abed-1pop-Netlogo软件（Luis R. Izquierdoy, Segismundo S. Izquierdoz, &amp; William H. Sandholm，2018）对五策略系统进行仿真模拟，得到图4-1实验界面：</p>
+<p>+———————————————————————————+<br>| <img src="/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/image1.png">{width=”6.866666666666666in” height=”6.663535651793526in”} |<br>|                                                                                 |<br>| 图4‑1 Replicator仿真实验界面                                                    |<br>+=================================================================================+<br>+———————————————————————————+</p>
+<p><strong>参数设定</strong></p>
+<p>payoff-matrix [[ 0 3 4 11 11 ] [ 5 0 2 11 12 ] [ 2 5 0 9 12 ] [ 6 10 10 0 3 ] [ 10 10 10 4 0 ]]</p>
+<p>n-of-agents 1000</p>
+<p>random-initial-condition? FALSE</p>
+<p>initial-condition [200 200 200 200 200]</p>
+<p>candidate-selection imitative</p>
+<p>n-of-candidates 2</p>
+<p>decision-method pairwise-difference</p>
+<p>complete-matching? TRUE</p>
+<p>n-of-trials 999</p>
+<p>single-sample? TRUE</p>
+<p>tie-breaker uniform</p>
+<p>log-noise-level 0</p>
+<p>use-prob-revision? TRUE</p>
+<p>prob-revision 0.05</p>
+<p>n-of-revisions-per-tick 200</p>
+<p>prob-mutation 0.001</p>
+<p>trials-with-replacement? FALSE</p>
+<p>self-matching? FALSE</p>
+<p>imitatees-with-replacement? FALSE</p>
+<p>consider-imitating-self? FALSE</p>
+<p>plot-every-?-secs 1</p>
+<p>duration-of-recent 10</p>
+<p>show-recent-history? TRUE</p>
+<p>show-complete-history? TRUE</p>
+<p><strong>仿真结果</strong></p>
+<p>利用abed对五策略博弈进行仿真模拟，得出图4-2的策略分布运动结果，实验设定初始的每个策略浓度都为0.2，经过一段时间的运动之后各个策略分布平均浓度接近纳什均衡。</p>
+<p>+———————————————————————————–+<br>| <img src="/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/image2.png" style="zoom:80%;"> |<br>|                                                                                   |<br>| 图4‑2 Replicator仿真策略分布                                                      |<br>+===================================================================================+<br>+———————————————————————————–+</p>
+<p>图4-3表示各个策略的收益，同样的在经过一段时间的演化之后表现出了周期性的运动。</p>
+<p>+———————————————————————————–+<br>| <img src="/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/image3.png">{width=”3.0730653980752405in” height=”2.1329680664916886in”} |<br>|                                                                                   |<br>| 图4‑3 Replicator仿真策略期望收益                                                  |<br>+===================================================================================+<br>+———————————————————————————–+</p>
+<hr>
+<p>  维度              纳什均衡理论值    仿真策略平均浓度   误差</p>
+<hr>
+<p>  X1                0.148644          0.1506             1.3159%</p>
+<p>  X2                0.213592          0.2112             1.1199%</p>
+<p>  X3                0.214597          0.2112             1.5830%</p>
+<p>  X4                0.096418          0.1001             3.8188%</p>
+<h2 id="X5-0-326749-0-3232-1-0861"><a href="#X5-0-326749-0-3232-1-0861" class="headerlink" title="  X5                0.326749          0.3232             1.0861%"></a>  X5                0.326749          0.3232             1.0861%</h2><p>[[CHART]]{.chart}</p>
+<p>NE =</p>
+<p>0.1486 0.2136 0.2146 0.0964 0.3267</p>
+<p>abed_angluar_momentum =</p>
+<p>0.0014</p>
+<p>-0.0022</p>
+<p>0.0001</p>
+<p>0.0007</p>
+<p>0.0015</p>
+<p>-0.0024</p>
+<p>0.0024</p>
+<p>0.0045</p>
+<p>-0.0052</p>
+<p>0.0021</p>
+]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>郭航溢_五维_715</title>
+    <url>/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/</url>
+    <content><![CDATA[<ol>
+<li><p> 通过本征向量求分向量随时间变化趋势</p>
+</li>
+<li><p> R =[]; V =[]; Ne=[];   </p>
+</li>
+<li><p> s=perms(1:5);  </p>
+</li>
+<li><p> % for t=1:10000   </p>
+</li>
+<li><p> syms x1 x2 x3 x4 x5   real  </p>
+</li>
+<li><p> payoff_matrix = [ 0 3 4 11 11 ; 5 0 2 11 12 ; 2 5 0 9 12 ; 6 10 10 0 3 ; 10 10 10 4 0 ]  </p>
+</li>
+<li><p> % a= 1   </p>
+</li>
+<li><p> % payoff_matrix = [ 0 0 0 0 a; 1 0 0 0 0 ; 0 1 0 0 0 ; 0 0 1 0 0 ; 0 0 0 1 0 ]  </p>
+</li>
+<li><p> %    payoff_matrix  = [0 -1  1  1 -1;   </p>
+</li>
+<li><p> %                      1  0 -1 -1  1;  </p>
+</li>
+<li><p> %                     -1  1  0  1 -1;  </p>
+</li>
+<li><p> %                     -1  1 -1  0  1;  </p>
+</li>
+<li><p> %                      1 -1  1 -1  0 ]  </p>
+</li>
+<li><p> %         t=randi([1 120],[5 1])  </p>
+</li>
+<li><p> %         payoff_matrix = s(t,:)  </p>
+</li>
+<li><p> Payoff_vector_field_F = payoff_matrix *[x1 x2 x3 x4 x5]&#39;;  </p>
+</li>
+<li><p> mean_U = [x1 x2 x3 x4 x5] * Payoff_vector_field_F;  </p>
+</li>
+<li><p> V_Eq_0 = [x1 x2 x3 x4 x5]&#39;.*(Payoff_vector_field_F - mean_U);  </p>
+</li>
+<li><p> Jac = [ diff(V_Eq_0,&#39;x1&#39;) diff(V_Eq_0,&#39;x2&#39;) diff(V_Eq_0,&#39;x3&#39;) ...  </p>
+</li>
+<li><p> diff(V_Eq_0,&#39;x4&#39;) diff(V_Eq_0,&#39;x5&#39;) ] ;   </p>
+</li>
+<li></li>
+<li><p> S=solve(V_Eq_0);  </p>
+</li>
+<li><p> A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);  </p>
+</li>
+<li><p> s=prod(A,2);  </p>
+</li>
+<li><p> id = find(s~= 0);  </p>
+</li>
+<li><p> if size(id,1)==1  </p>
+</li>
+<li><p> x1=A(id,1); x2=A(id,2); x3=A(id,3); x4=A(id,4); x5=A(id,5);   </p>
+</li>
+<li><p> %                 x1=0.2; x2=0.2; x3=0.2; x4=0.2; x5=0.2;   </p>
+</li>
+<li><p> Jac_at_NE = eval(Jac)  </p>
+</li>
+<li><p> [eigen_vector eigen_value] = eig(Jac_at_NE)  </p>
+</li>
+<li><p> %                           R=[R; payoff_matrix];  </p>
+</li>
+<li><p> %                           V=[V; diag(eigen_value)&#39;];  </p>
+</li>
+<li><p> % %                           Ne=[Ne; s];  </p>
+</li>
+<li><p> %                   figure  </p>
+</li>
+<li><p> %                 v=diag(eigen_vector(:,1));hold on  </p>
+</li>
+<li><p> %                 quiver([1:5]&#39;*0,[1:5]&#39;*0,real(v),imag(v),1)  </p>
+</li>
+<li><p> %                 text(real(v)*1.05,imag(v)*1.05, num2str([1:5]&#39;),&#39;fontsize&#39;,15);axis square;  </p>
+</li>
+<li><p> end  </p>
+</li>
+<li><p> % end  </p>
+</li>
+<li><p> v = eigen_vector(:,3)  </p>
+</li>
+<li><p> [Lmn Tmn]= from_eigenvector_out_am(v)  </p>
+</li>
+<li><p> % save(&#39;manifold5try.mat&#39;, &#39;R&#39;,&#39;V&#39;,&#39;Ne&#39; )  </p>
+</li>
+<li><p> t=0:0.1:30  </p>
+</li>
+<li><p> x=v*exp(0.4294i *t);  </p>
+</li>
+<li><p> xr=real(x)&#39;;  </p>
+</li>
+<li><p> plot(xr,&#39;DisplayName&#39;,&#39;xr&#39;)  </p>
+</li>
+<li><p> plot(xr(:,1),xr(:,2),&#39;.&#39;)  </p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- --&gt;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p> function [Lmn Tmn]= from_eigenvector_out_am(v)  </p>
+</li>
+<li><p> Ndim=length(v);  </p>
+</li>
+<li><p> Lmn=[];  </p>
+</li>
+<li><p> Tmn=zeros(Ndim);  </p>
+</li>
+<li><p> for m=1:Ndim-1  </p>
+</li>
+<li><p> for n=m+1:Ndim   </p>
+</li>
+<li><p> vm=v(m);  </p>
+</li>
+<li><p> vn=v(n);  </p>
+</li>
+<li><p> area_m_n = abs(vm)*abs(vn)*pi*sin(angle(vm)-angle(vn));  </p>
+</li>
+<li><p> Lmn=[Lmn; area_m_n];  </p>
+</li>
+<li><p> Tmn(m,n) = area_m_n;  </p>
+</li>
+<li><p> Tmn(n,m) = -area_m_n;  </p>
+</li>
+<li><p> end;  </p>
+</li>
+<li><p> end  </p>
+</li>
+<li><p> end  </p>
+</li>
+</ol>
+<p><img src="/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/image1.png">{width=”5.768055555555556in” height=”5.126388888888889in”}</p>
+<p>图为分向量x1与x2的利萨如图形</p>
+<p><img src="/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/image2.png">{width=”5.768055555555556in” height=”5.144444444444445in”}</p>
+<p>图为五个分向量随时间t的变化图</p>
+<p>2.在纳什均衡情况下给予扰动，通过速度求分向量</p>
+<ol>
+<li><p> R =[]; V =[]; Ne=[];   </p>
+</li>
+<li><p> s=perms(1:5);  </p>
+</li>
+<li><p> % for t=1:10000   </p>
+</li>
+<li><p> syms x1 x2 x3 x4 x5   real  </p>
+</li>
+<li><p> payoff_matrix = [ 0 3 4 11 11 ; 5 0 2 11 12 ; 2 5 0 9 12 ; 6 10 10 0 3 ; 10 10 10 4 0 ]  </p>
+</li>
+<li><p> % a= 1   </p>
+</li>
+<li><p> % payoff_matrix = [ 0 0 0 0 a; 1 0 0 0 0 ; 0 1 0 0 0 ; 0 0 1 0 0 ; 0 0 0 1 0 ]  </p>
+</li>
+<li><p> %    payoff_matrix  = [0 -1  1  1 -1;   </p>
+</li>
+<li><p> %                      1  0 -1 -1  1;  </p>
+</li>
+<li><p> %                     -1  1  0  1 -1;  </p>
+</li>
+<li><p> %                     -1  1 -1  0  1;  </p>
+</li>
+<li><p> %                      1 -1  1 -1  0 ]  </p>
+</li>
+<li><p> %         t=randi([1 120],[5 1])  </p>
+</li>
+<li><p> %         payoff_matrix = s(t,:)  </p>
+</li>
+<li><p> Payoff_vector_field_F = payoff_matrix *[x1 x2 x3 x4 x5]&#39;;  </p>
+</li>
+<li><p> mean_U = [x1 x2 x3 x4 x5] * Payoff_vector_field_F;  </p>
+</li>
+<li><p> V_Eq_0 = [x1 x2 x3 x4 x5]&#39;.*(Payoff_vector_field_F - mean_U);  </p>
+</li>
+<li><p> Jac = [ diff(V_Eq_0,&#39;x1&#39;) diff(V_Eq_0,&#39;x2&#39;) diff(V_Eq_0,&#39;x3&#39;) ...  </p>
+</li>
+<li><p> diff(V_Eq_0,&#39;x4&#39;) diff(V_Eq_0,&#39;x5&#39;) ] ;   </p>
+</li>
+<li></li>
+<li><p> S=solve(V_Eq_0);  </p>
+</li>
+<li><p> A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);  </p>
+</li>
+<li><p> s=prod(A,2);  </p>
+</li>
+<li><p> id = find(s~= 0);  </p>
+</li>
+<li><p> if size(id,1)==1  </p>
+</li>
+<li><p> x1=A(id,1); x2=A(id,2); x3=A(id,3); x4=A(id,4); x5=A(id,5);   </p>
+</li>
+<li><p> %                 x1=0.2; x2=0.2; x3=0.2; x4=0.2; x5=0.2;   </p>
+</li>
+<li><p> Jac_at_NE = eval(Jac)  </p>
+</li>
+<li><p> [eigen_vector eigen_value] = eig(Jac_at_NE)  </p>
+</li>
+<li><p> %                           R=[R; payoff_matrix];  </p>
+</li>
+<li><p> %                           V=[V; diag(eigen_value)&#39;];  </p>
+</li>
+<li><p> % %                           Ne=[Ne; s];  </p>
+</li>
+<li><p> %                   figure  </p>
+</li>
+<li><p> %                 v=diag(eigen_vector(:,1));hold on  </p>
+</li>
+<li><p> %                 quiver([1:5]&#39;*0,[1:5]&#39;*0,real(v),imag(v),1)  </p>
+</li>
+<li><p> %                 text(real(v)*1.05,imag(v)*1.05, num2str([1:5]&#39;),&#39;fontsize&#39;,15);axis square;  </p>
+</li>
+<li><p> end  </p>
+</li>
+<li><p> % end  </p>
+</li>
+<li><p> v = eigen_vector(:,3)  </p>
+</li>
+<li><p> [Lmn Tmn]= from_eigenvector_out_am(v)  </p>
+</li>
+<li><p> % save(&#39;manifold5try.mat&#39;, &#39;R&#39;,&#39;V&#39;,&#39;Ne&#39; )  </p>
+</li>
+<li><p> %% 演示沿着本征向量上的偏离，系统运动的特征  </p>
+</li>
+<li><p> c2=eigen_vector(:,3)&#39;    </p>
+</li>
+<li><p> period_para=abs(imag(eigen_value(3,3)));    </p>
+</li>
+<li><p> % 这是举例，沿着第二个本征方向上，偏离了 0.01倍 系统会怎样。  </p>
+</li>
+<li><p> ut=[];  </p>
+</li>
+<li><p> % % % % % % % % % % % % % % % %   for ampt=0:0.01:0.1  </p>
+</li>
+<li><p> ampt=0.01  </p>
+</li>
+<li><p> utt=[];  </p>
+</li>
+<li><p> t2=[[[x1 x2 x3 x4 x5] + ampt*real(c2)]]  </p>
+</li>
+<li><p> tstep = 0.02; %时间步长取0.02  </p>
+</li>
+<li><p> Anoise = 0;  </p>
+</li>
+<li><p> for k=0:tstep:60*pi/period_para  </p>
+</li>
+<li><p> %      x1 = t2(length(t2(:,1)),1); x2 = t2(length(t2(:,1)),2); x3 = t2(length(t2(:,1)),3); x4 = t2(length(t2(:,1)),4);   </p>
+</li>
+<li><p> %      X = [x1 x2 x3 x4]&#39; + eval(V_F)*tstep;   </p>
+</li>
+<li><p> x1 = t2(length(t2(:,1)),1) + eval( V_Eq_0(1))*tstep;   </p>
+</li>
+<li><p> x2 = t2(length(t2(:,1)),2) + eval( V_Eq_0(2))*tstep;  </p>
+</li>
+<li><p> x3 = t2(length(t2(:,1)),3) + eval( V_Eq_0(3))*tstep;  </p>
+</li>
+<li><p> x4 = t2(length(t2(:,1)),4) + eval( V_Eq_0(4))*tstep;   </p>
+</li>
+<li><p> x5 = t2(length(t2(:,1)),5) + eval( V_Eq_0(5))*tstep;  </p>
+</li>
+<li><p> %     X=X/sum(abs(X));  </p>
+</li>
+<li><p> %     t2=[t2; X&#39; k];  </p>
+</li>
+<li><p> %                   tseed = rand(1,4); tNoise0 = (tseed - mean(tseed))*Anoise;  </p>
+</li>
+<li><p> %                   AddNoise0 = [x1 x2 x3 x4] + tNoise0;  </p>
+</li>
+<li><p> %                   AddNoise1 = AddNoise0 / sum(abs(AddNoise0))  </p>
+</li>
+<li><p> %               t2=[t2; AddNoise1 k];  </p>
+</li>
+<li><p> t2=[t2; [x1 x2 x3 x4 x5]];  </p>
+</li>
+<li><p> end  </p>
+</li>
+</ol>
+<p><img src="/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/image3.png">{width=”6.940340113735783in” height=”3.716666666666667in”}</p>
+<p>图为分向量随时间的变化图</p>
+]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
   </entry>
   <entry>
     <title>参数分类结果20210716_郭航溢</title>
-    <url>/ghy.github.io/2021/08/02/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/</url>
+    <url>/ghy.github.io/2021/07/16/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/</url>
     <content><![CDATA[<p><strong>参数分类结果20210716 郭航溢</strong></p>
 <p>17万ticks时的角动量散点图。</p>
-<p><img src="/ghy.github.io/2021/08/02/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/image1.png"></p>
+<p><img src="/ghy.github.io/2021/07/16/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/image1.png"></p>
 <p>[[CHART]]{.chart}</p>
 <p>配置参数：</p>
 <p>payoff-matrix [[ 0 3 4 11 11 ] [ 5 0 2 11 12 ] [ 2 5 0 9 12 ] [ 6 10 10 0 3 ] [ 10 10 10 4 0 ]]</p>
@@ -485,7 +836,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>Netlogo 6.0.4</p>
 <p>Abed-1pop</p>
 <p>运行时间：</p>
-<p><img src="/ghy.github.io/2021/08/02/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/image2.png"></p>
+<p><img src="/ghy.github.io/2021/07/16/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/image2.png"></p>
 <p>实验数据文件名：</p>
 <p>.abed-1pop.tmp Strategy distributions (recent history)717.csv</p>
 <p>（仿真实验数据准备）</p>
