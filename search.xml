@@ -117,18 +117,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>from_N_colExp_out_am</title>
-    <url>/ghy.github.io/2021/08/02/from-N-colExp-out-am/</url>
-    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t] = from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>%         NE=mean(a_0)<br>        Ndim=length(dos_x_t(1,:));<br>    sum_am_rr=[];<br>    inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
+    <title>batch_process_expout</title>
+    <url>/ghy.github.io/2021/08/02/batch-process-expout/</url>
+    <content><![CDATA[<p>payx5=get_5x5_from_abedExp(‘E:\毕设\abed_1_exp202107\result_exp202107’);</p>
 ]]></content>
       <categories>
         <category>matlab</category>
       </categories>
   </entry>
   <entry>
-    <title>batch_process_expout</title>
-    <url>/ghy.github.io/2021/08/02/batch-process-expout/</url>
-    <content><![CDATA[<p>payx5=get_5x5_from_abedExp(‘E:\毕设\abed_1_exp202107\result_exp202107’);</p>
+    <title>from_N_colExp_out_am</title>
+    <url>/ghy.github.io/2021/08/02/from-N-colExp-out-am/</url>
+    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t] = from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>%         NE=mean(a_0)<br>        Ndim=length(dos_x_t(1,:));<br>    sum_am_rr=[];<br>    inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -208,16 +208,6 @@ end
       </categories>
   </entry>
   <entry>
-    <title>get_dos_x_t_from_abeddata</title>
-    <url>/ghy.github.io/2021/08/02/get-dos-x-t-from-abeddata/</url>
-    <content><![CDATA[<p>% Programmer: socexp, WZJ, 20210724 simplified, rewrite<br>% Notice: Only for 5 strategy case<br>% Input: abedfilesname, full path and file name<br>% Output: density of state x at time t, 5 column  </p>
-<p>function dos_x_t = get_dos_x_t_from_abeddata(abedfilesname)<br>            [num,txt,raw] = xlsread(abedfilesname);<br>                            t=length(txt(:,1));<br>                            u=raw(t+1:length(raw(:,1)),:);<br>                            v=cell2table(u);<br>                            ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>             dos_x_t = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>end</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
     <title>get_eigensystem_from_5x5</title>
     <url>/ghy.github.io/2021/08/02/get-eigensystem-from-5x5/</url>
     <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  payoff_matrix   — the payoff<br>% Output: eigen_vector,<br>%         d_eigen_value,<br>%         rest_point_no<br>%         of the 5x5 payoff matrix</p>
@@ -241,17 +231,9 @@ end
       </categories>
   </entry>
   <entry>
-    <title>multi_reg_Eam_Tec</title>
-    <url>/ghy.github.io/2021/08/02/multi-reg-Eam-Tec/</url>
-    <content><![CDATA[<p>% Programmer: socexp, WZJ, rewrite 20210723<br>% Input: Tec – Theoretical predictor, eigencycle<br>%        Eam – Abed experiment angular momentum<br>% Output: multi linear regression results<br>%          coef_coefint3col – the coefficient, 95% confidence intervals<br>%                    for the coefficient estimates. 6 raws 3 column<br>%          resid_residint3col – the residual, 95% confidence intervals<br>%                    for the residuals estimates. 6 rows 3 column<br>%          R2_F_p_evar – the R2 statistic, the F statistic<br>%                     and its p value, and an estimate<br>%                     of the error variance. 1 row 4 column<br>function [coef_coefint3col,resid_residint3col,R2_F_p_evar] = …<br>                       multi_reg_Eam_Tec(Eam,Tec)</p>
-<pre><code>y=Eam;
-x=Tec;
-X = [ones(size(y)) x]; 
-[coef,coefint,resid,residint,R2_F_p_evar] = regress(y,X);
-coef_coefint3col = [coef coefint];
-resid_residint3col = [resid residint];
-</code></pre>
-<p>end</p>
+    <title>get_payoffmatrix_from_index</title>
+    <url>/ghy.github.io/2021/08/02/get-payoffmatrix-from-index/</url>
+    <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  R   — the payoff array,<br>%        id   — the number of the game<br>% Output: the 5x5 payoff matrix<br>function retM5x5 = get_payoffmatrix_from_index(Ro,id)<br>    j=(id-1)*5;<br>    retM5x5 = Ro(j+1:j+5,:);<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -277,9 +259,36 @@ resid_residint3col = [resid residint];
       </categories>
   </entry>
   <entry>
-    <title>get_payoffmatrix_from_index</title>
-    <url>/ghy.github.io/2021/08/02/get-payoffmatrix-from-index/</url>
-    <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  R   — the payoff array,<br>%        id   — the number of the game<br>% Output: the 5x5 payoff matrix<br>function retM5x5 = get_payoffmatrix_from_index(Ro,id)<br>    j=(id-1)*5;<br>    retM5x5 = Ro(j+1:j+5,:);<br>end</p>
+    <title>multi_reg_Eam_Tec</title>
+    <url>/ghy.github.io/2021/08/02/multi-reg-Eam-Tec/</url>
+    <content><![CDATA[<p>% Programmer: socexp, WZJ, rewrite 20210723<br>% Input: Tec – Theoretical predictor, eigencycle<br>%        Eam – Abed experiment angular momentum<br>% Output: multi linear regression results<br>%          coef_coefint3col – the coefficient, 95% confidence intervals<br>%                    for the coefficient estimates. 6 raws 3 column<br>%          resid_residint3col – the residual, 95% confidence intervals<br>%                    for the residuals estimates. 6 rows 3 column<br>%          R2_F_p_evar – the R2 statistic, the F statistic<br>%                     and its p value, and an estimate<br>%                     of the error variance. 1 row 4 column<br>function [coef_coefint3col,resid_residint3col,R2_F_p_evar] = …<br>                       multi_reg_Eam_Tec(Eam,Tec)</p>
+<pre><code>y=Eam;
+x=Tec;
+X = [ones(size(y)) x]; 
+[coef,coefint,resid,residint,R2_F_p_evar] = regress(y,X);
+coef_coefint3col = [coef coefint];
+resid_residint3col = [resid residint];
+</code></pre>
+<p>end</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>get_dos_x_t_from_abeddata</title>
+    <url>/ghy.github.io/2021/08/02/get-dos-x-t-from-abeddata/</url>
+    <content><![CDATA[<p>% Programmer: socexp, WZJ, 20210724 simplified, rewrite<br>% Notice: Only for 5 strategy case<br>% Input: abedfilesname, full path and file name<br>% Output: density of state x at time t, 5 column  </p>
+<p>function dos_x_t = get_dos_x_t_from_abeddata(abedfilesname)<br>            [num,txt,raw] = xlsread(abedfilesname);<br>                            t=length(txt(:,1));<br>                            u=raw(t+1:length(raw(:,1)),:);<br>                            v=cell2table(u);<br>                            ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>             dos_x_t = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>end</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>new_from_N_colExp_out_am</title>
+    <url>/ghy.github.io/2021/08/02/new-from-N-colExp-out-am/</url>
+    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t, mean_x,std_x] = new_from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>       if nargin &lt; 2<br>           NE = mean(dos_x_t);<br>       end<br>       mean_x = NE;<br>       std_x =  std(dos_x_t);<br>         Ndim=length(dos_x_t(1,:));<br>        sum_am_rr=[];<br>        inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -313,9 +322,9 @@ resid_residint3col = [resid residint];
       </categories>
   </entry>
   <entry>
-    <title>new_from_N_colExp_out_am</title>
-    <url>/ghy.github.io/2021/08/02/new-from-N-colExp-out-am/</url>
-    <content><![CDATA[<p>function  [ Yret3,mn,am_eigencycleDim_t, mean_x,std_x] = new_from_N_colExp_out_am(dos_x_t,NE)<br>% am_eigencycleDim_t has<br>% function  [ Yret3 mn] = from_N_colExp_out_am(a_0,NE)<br>%<br>%     a_0=load(‘D:\M\Binmore_2.csv’);<br>%     a_0=load(filenameYQM);<br>       if nargin &lt; 2<br>           NE = mean(dos_x_t);<br>       end<br>       mean_x = NE;<br>       std_x =  std(dos_x_t);<br>         Ndim=length(dos_x_t(1,:));<br>        sum_am_rr=[];<br>        inst_am_rr =[]; %T-1 raws, N*(N-1)/2 column<br>    for m=1:Ndim-1<br>        for n=m+1:Ndim<br>                x=dos_x_t(:,m);<br>                y=dos_x_t(:,n);<br>                L=[0,0,0];<br>                inst_am_tmp=[];<br>            for j=1:1:length(dos_x_t(:,1))-1<br>                 x1=(x(j+1)-NE(m));<br>                 y1=(y(j+1)-NE(n));<br>                 x0=(x(j)-NE(m));<br>                 y0=(y(j)-NE(n));<br>                 detx=x1-x0;<br>                 dety=y1-y0;<br>                 inst_am=cross([x0,y0,0],[detx,dety,0]);<br>                 inst_am_tmp=[inst_am_tmp; inst_am(3)];<br>                 L=L+inst_am(3);<br>            end<br>                sum_am_rr=[sum_am_rr;L(3)];<br>                inst_am_rr =[inst_am_rr inst_am_tmp];<br>        end<br>    end<br>%     Yret1 = angle;<br>% output<br>    Yret3 = sum_am_rr;<br>        mn=[];<br>        for m=1:Ndim-1<br>        for n=m+1:Ndim<br>            mn=[mn; m n];<br>        end<br>        end<br>    am_eigencycleDim_t = inst_am_rr;<br>end</p>
+    <title>process_express_to_angluar</title>
+    <url>/ghy.github.io/2021/08/02/process-express-to-angluar/</url>
+    <content><![CDATA[<p>abedfilesname = ‘abed-1pop Strategy distributions (recent history)id292_7-22(2).csv’;<br>[num,txt,raw] = xlsread(abedfilesname);<br>t=length(txt(:,1));<br>u=raw(t+1:length(raw(:,1)),:);<br>v=cell2table(u);<br>ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>psd = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>abed_mean=mean(psd)<br>NE =  [[0.2,0.2,0.2,0.2,0.2]]<br>abed_angluar_momentum = from_N_colExp_out_am(psd,NE)</p>
 ]]></content>
       <categories>
         <category>matlab</category>
@@ -333,15 +342,6 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
             x1=A(id,1); x2=A(id,2); x3=A(id,3); x4=A(id,4); x5=A(id,5); 
 </code></pre>
 <p>%                 x1=0.2; x2=0.2; x3=0.2; x4=0.2; x5=0.2;<br>                Jac_at_NE = eval(Jac)<br>                [eigen_vector eigen_value] = eig(Jac_at_NE)<br>%                           R=[R; payoff_matrix];<br>%                           V=[V; diag(eigen_value)’];<br>% %                           Ne=[Ne; s];<br>%                   figure<br>%                 v=diag(eigen_vector(:,1));hold on<br>%                 quiver([1:5]’*0,[1:5]’*0,real(v),imag(v),1)<br>%                 text(real(v)*1.05,imag(v)<em>1.05, num2str([1:5]’),’fontsize’,15);axis square;<br>         end<br>% end<br>        v = eigen_vector(:,3)<br>        [Lmn Tmn]= from_eigenvector_out_am(v)<br>% save(‘manifold5try.mat’, ‘R’,’V’,’Ne’ )<br>t=0:0.1:30<br>x=v</em>exp(0.4294i *t);<br>xr=real(x)’;<br>plot(xr,’DisplayName’,’xr’)<br>scatter(xr(:,1),xr(:,2),’.’)</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>process_express_to_angluar</title>
-    <url>/ghy.github.io/2021/08/02/process-express-to-angluar/</url>
-    <content><![CDATA[<p>abedfilesname = ‘abed-1pop Strategy distributions (recent history)id292_7-22(2).csv’;<br>[num,txt,raw] = xlsread(abedfilesname);<br>t=length(txt(:,1));<br>u=raw(t+1:length(raw(:,1)),:);<br>v=cell2table(u);<br>ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>psd = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>abed_mean=mean(psd)<br>NE =  [[0.2,0.2,0.2,0.2,0.2]]<br>abed_angluar_momentum = from_N_colExp_out_am(psd,NE)</p>
 ]]></content>
       <categories>
         <category>matlab</category>
