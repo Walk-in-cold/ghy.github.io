@@ -3,8 +3,8 @@
   <entry>
     <title>批量仿真与批处理仿真数据</title>
     <url>/ghy.github.io/2021/07/24/0724-doc/</url>
-    <content><![CDATA[<p>批量仿真与批处理仿真数据</p>
-<p>参考文件：ABED批量实验方法介绍0723a.docx</p>
+    <content><![CDATA[<h1 id="批量仿真与批处理仿真数据"><a href="#批量仿真与批处理仿真数据" class="headerlink" title="批量仿真与批处理仿真数据"></a>批量仿真与批处理仿真数据</h1><ol>
+<li><p>参考文件：ABED批量实验方法介绍0723a.docx</p>
 <p>使用函数：main_of_get_eigen.m 得到支付矩阵</p>
 <p>batch_process_ana.m 调用gdt_integrate_1的主函数</p>
 <p>gdt_integrate_1.m 输入存放仿真结果的文件夹，生成mat文件</p>
@@ -12,8 +12,11 @@
 <p>multi_reg_Eam_Tec.m 对实验值角动量与理论本征圈值多元线性回归</p>
 <p>new_from_N_colExp_out_am.m 对函数做改进，可不传NE参数,主要输出角动量</p>
 <p>new_get_eigensystem_from_5x5.m 输出本征值本征向量，本征圈值以及不动点数</p>
-<p>实验目的：对”分类20210718。xlsx”中的前12个双复数GAME进行批量仿真，并输出仿真结果文件、分析文件。分别保存到E:\abed\abed-1pop-master\result_exp20210724文件夹与E:\abed\abed-1pop-master\result_ana20210724中。</p>
-<p>分析文件（mat）逻辑结构如下。<br><img src="/ghy.github.io/2021/07/24/0724-doc/imagel1.png"></p>
+</li>
+<li><p>实验目的：对”分类20210718。xlsx”中的前12个双复数GAME进行批量仿真，并输出仿真结果文件、分析文件。分别保存到E:\abed\abed-1pop-master\result_exp20210724文件夹与E:\abed\abed-1pop-master\result_ana20210724中。</p>
+<p>分析文件（mat）逻辑结构如下。</p>
+<img src="/ghy.github.io/2021/07/24/0724-doc/imagel1.png"></li>
+</ol>
 ]]></content>
       <categories>
         <category>文档</category>
@@ -75,8 +78,8 @@
 <p>  [&quot;show-complete-history?&quot; true]</p>
 <p>  [&quot;consider-imitating-self?&quot; false]</p>
 <p>  [&quot;candidate-selection&quot; &quot;imitative&quot;]</p>
-<p>  [&quot;prob-mutation&quot; 0.01]</p>
-<h2 id="quot-use-prob-revision-quot-true"><a href="#quot-use-prob-revision-quot-true" class="headerlink" title="  [&quot;use-prob-revision?&quot; true]"></a>  [&quot;use-prob-revision?&quot; true]</h2><h3 id="输出文件参数设置-B-区"><a href="#输出文件参数设置-B-区" class="headerlink" title="输出文件参数设置 B 区"></a>输出文件参数设置 B 区</h3><p>let K random-float 1.0</p>
+<p>  [&quot;prob-mutation&quot; 0.01]<br>  [&quot;use-prob-revision?&quot; true]</p>
+<h3 id="输出文件参数设置-B-区"><a href="#输出文件参数设置-B-区" class="headerlink" title="输出文件参数设置 B 区"></a>输出文件参数设置 B 区</h3><p>let K random-float 1.0</p>
 <p>export-plot &quot;Strategy distributions (complete history)&quot; (word &quot;./result_exp202107/&quot; wzj2 &quot;-&quot; K &quot;.csv&quot;)</p>
 <h3 id="输出文件参数设置-C-区"><a href="#输出文件参数设置-C-区" class="headerlink" title="输出文件参数设置 C 区"></a>输出文件参数设置 C 区</h3><p>小型实验用；这里示例是取5策略的值。 可输出全部实验文件到一个csv文件中。</p>
 <h3 id="输出文件参数设置-D-区"><a href="#输出文件参数设置-D-区" class="headerlink" title="输出文件参数设置 D 区"></a>输出文件参数设置 D 区</h3><p>设置Ticks 的值，这里取5万次。 由于update 比例0.2， [&quot;prob-revision&quot; 0.2]； 按照每秒输出一个记录的话，那么，输出应该是 1万条记录</p>
@@ -355,13 +358,10 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
   <entry>
     <title>“五策略博弈动力学仿真实验”</title>
     <url>/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/</url>
-    <content><![CDATA[<p>五策略博弈动力学仿真实验</p>
-<p>用到的数据：</p>
-<p>分类20210718.xlsx：对其中的双复数数据进行处理，需要处理的数据后有标号，为K列。</p>
+    <content><![CDATA[<h1 id="五策略博弈动力学仿真实验"><a href="#五策略博弈动力学仿真实验" class="headerlink" title="五策略博弈动力学仿真实验"></a>五策略博弈动力学仿真实验</h1><h2 id="用到的数据"><a href="#用到的数据" class="headerlink" title="用到的数据"></a>用到的数据</h2><p>分类20210718.xlsx：对其中的双复数数据进行处理，需要处理的数据后有标号，为K列。</p>
 <p>manifold5try.mat：存放支付矩阵等数据，共491个五策略支付矩阵，通过main_of_get_eigen.m与对应标号来读取。</p>
-<p>用到的函数</p>
-<ol>
-<li> 函数get_payoffmatrix_from_index</li>
+<h2 id="用到的函数"><a href="#用到的函数" class="headerlink" title="用到的函数"></a>用到的函数</h2><ol>
+<li> <strong>函数get_payoffmatrix_from_index</strong></li>
 </ol>
 <blockquote>
 <p>参数R0：所有的支付矩阵</p>
@@ -377,7 +377,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>retM5x5 = Ro(j+1:j+5,:);</p>
 <p>end</p>
 <ol start="2">
-<li> 函数get_eigensystem_from_5x5</li>
+<li> <strong>函数get_eigensystem_from_5x5</strong></li>
 </ol>
 <blockquote>
 <p>参数：一个5x5的payoff_matrix</p>
@@ -415,7 +415,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>end</p>
 <p>end</p>
 <ol start="3">
-<li> main_of_get_eigen.m</li>
+<li> <strong>main_of_get_eigen.m</strong></li>
 </ol>
 <blockquote>
 <p>一个从mat文件到特征向量特征值的实例</p>
@@ -424,7 +424,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>retM5x5 = get_payoffmatrix_from_index(R,438)</p>
 <p>[eigen_vector, d_eigen_value, rest_point_no] = get_eigensystem_from_5x5(retM5x5)</p>
 <ol start="4">
-<li> two_arg_liner.m</li>
+<li> <strong>two_arg_liner.m</strong></li>
 </ol>
 <blockquote>
 <p>双线性回归函数，y为仿真结果的角动量，xx1与xx2分别为两本征圈值。代码中的y与xx1、xx2值为实例，可变。</p>
@@ -442,30 +442,30 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>plot(xx1,z,&#39;-r&#39;);</p>
 <p>hold off</p>
 <ol start="5">
-<li> tmp202107021.m</li>
+<li> <strong>tmp202107021.m</strong></li>
 </ol>
 <blockquote>
 <p>此函数对payoff_matrix进行赋值，得到特征值特征向量以及本征圈，本征圈值存放在Lmn中。</p>
 </blockquote>
 <ol start="6">
-<li> process_expres_to_angluar.m</li>
+<li> <strong>process_expres_to_angluar.m</strong></li>
 </ol>
 <blockquote>
 <p>此函数对实验数据结果csv文件进行处理，得到均值，角动量值等数据。</p>
 </blockquote>
-<p>Game1：</p>
+<p><strong>Game1：</strong></p>
 <p>支付矩阵id292：</p>
 <p>3 2 4 5 1</p>
 <p>1 2 4 5 3</p>
 <p>2 3 5 1 4</p>
 <p>4 2 5 1 3</p>
 <p>4 3 1 5 2</p>
-<p>纳什均衡：0.2 0.2 0.2 0.2 0.2</p>
-<p>仿真结果文件：abed-1pop Strategy distributions (recent history)id292_7-22(2).csv</p>
-<p>本征值：</p>
+<p><strong>纳什均衡</strong>：0.2 0.2 0.2 0.2 0.2</p>
+<p><strong>仿真结果文件</strong>：abed-1pop Strategy distributions (recent history)id292_7-22(2).csv</p>
+<p><strong>本征值</strong>：</p>
 <p>实部：-3 0.161399465001705 0.161399465001705 -0.361399465001704 -0.361399465001704</p>
 <p>虚部：0 -0.432654372374283 0.432654372374283 -0.222417523301943 0.222417523301943</p>
-<p>本征圈值：</p>
+<p><strong>本征圈值</strong>：</p>
 <p>xx1(2,3列本征向量)</p>
 <p>-0.346113264407322</p>
 <p>-0.616584091999450</p>
@@ -488,18 +488,21 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>0.0110022522137279</p>
 <p>-0.278880995740224</p>
 <p>-0.475976191460996</p>
-<p>仿真实验得到角动量值：</p>
+<p><strong>仿真实验得到角动量值</strong>：</p>
 <p>-1.19788000000000;-8.70448899999997;-2.10510399999999;12.0074730000000;4.42081100000002;-0.738843000000002;-4.87984800000000;3.46149399999998;-7.74517200000005;0.617546999999989</p>
-<p>二元线性回归结果：</p>
-<p>参数b：</p>
+<p><strong>二元线性回归结果</strong>：</p>
+<ol>
+<li><p>参数b：</p>
 <p>0.329780053048735</p>
 <p>12.2087048196517</p>
 <p>-0.179916914677596</p>
-<p>参数bint：</p>
+</li>
+<li><p>参数bint：</p>
 <p>-1.48900756502795 2.14856767112542</p>
 <p>8.38171858588976 16.0356910534136</p>
 <p>-5.33061581062000 4.97078198126481</p>
-<p>参数r:</p>
+</li>
+<li><p>参数r:</p>
 <p>2.60290946401207</p>
 <p>-1.49735644474596</p>
 <p>-2.62116888086800</p>
@@ -510,7 +513,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>1.84022388617118</p>
 <p>-0.478980690068974</p>
 <p>-1.98547234182193</p>
-<p>参数rint：</p>
+</li>
+<li><p>参数rint：</p>
 <p>-1.86382953468874 7.06964846271287</p>
 <p>-6.25318836443262 3.25847547494070</p>
 <p>-7.54343157790447 2.30109381616847</p>
@@ -521,16 +525,18 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>-3.45368668927343 7.13413446161578</p>
 <p>-5.62761503975707 4.66965365961912</p>
 <p>-6.72076864516395 2.74982396152009</p>
-<p>参数stats：</p>
+</li>
+<li><p>参数stats：</p>
 <p>0.893933316308013 29.4981090967626 0.000388621179942217 5.14728623302972</p>
-<p>散点图</p>
-<p>角动量关于xx1散点图：</p>
+</li>
+</ol>
+<h2 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a>散点图</h2><p>角动量关于xx1散点图：</p>
 <p><img src="/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/image1.png"></p>
 <p>角动量关于xx2散点图：</p>
 <p><img src="/ghy.github.io/2021/07/23/%E4%BA%94%E7%AD%96%E7%95%A5%E5%8D%9A%E5%BC%88%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F%E5%AE%9E%E9%AA%8C/image2.png"></p>
-<p>分析：</p>
-<p>可发现xx1拟合程度好，效果显著，同时线性回归后xx1系数为12.2，xx2系数为-0.179。xx1本征值实部为正，xx2实部为负，xx1虚部大。</p>
-<p>能级中分布纳什均衡，激发态扰动。</p>
+<p><strong>分析：</strong></p>
+<p><strong>可发现xx1拟合程度好，效果显著，同时线性回归后xx1系数为12.2，xx2系数为-0.179。xx1本征值实部为正，xx2实部为负，xx1虚部大。</strong></p>
+<p><strong>能级中分布纳什均衡，激发态扰动。</strong></p>
 ]]></content>
       <categories>
         <category>文档</category>
@@ -550,13 +556,9 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
   <entry>
     <title>测试安装结果20210714郭</title>
     <url>/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/</url>
-    <content><![CDATA[<p><strong>测试安装结果20210714 郭</strong></p>
-<p><strong>五策略博弈动力学Replicator仿真实验</strong></p>
-<p><strong>仿真实验界面</strong></p>
-<p>利用abed-1pop-Netlogo软件（Luis R. Izquierdoy, Segismundo S. Izquierdoz, &amp; William H. Sandholm，2018）对五策略系统进行仿真模拟，得到图4-1实验界面：</p>
+    <content><![CDATA[<h1 id="测试安装结果20210714-郭"><a href="#测试安装结果20210714-郭" class="headerlink" title="测试安装结果20210714 郭"></a><strong>测试安装结果20210714 郭</strong></h1><h2 id="五策略博弈动力学Replicator仿真实验"><a href="#五策略博弈动力学Replicator仿真实验" class="headerlink" title="五策略博弈动力学Replicator仿真实验"></a><strong>五策略博弈动力学Replicator仿真实验</strong></h2><h3 id="仿真实验界面"><a href="#仿真实验界面" class="headerlink" title="仿真实验界面"></a><strong>仿真实验界面</strong></h3><p>利用abed-1pop-Netlogo软件（Luis R. Izquierdoy, Segismundo S. Izquierdoz, &amp; William H. Sandholm，2018）对五策略系统进行仿真模拟，得到图4-1实验界面：</p>
 <p>+———————————————————————————+<br>| <img src="/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/image1.png">{width=”6.866666666666666in” height=”6.663535651793526in”} |<br>|                                                                                 |<br>| 图4‑1 Replicator仿真实验界面                                                    |<br>+=================================================================================+<br>+———————————————————————————+</p>
-<p><strong>参数设定</strong></p>
-<p>payoff-matrix [[ 0 3 4 11 11 ] [ 5 0 2 11 12 ] [ 2 5 0 9 12 ] [ 6 10 10 0 3 ] [ 10 10 10 4 0 ]]</p>
+<h3 id="参数设定"><a href="#参数设定" class="headerlink" title="参数设定"></a><strong>参数设定</strong></h3><p>payoff-matrix [[ 0 3 4 11 11 ] [ 5 0 2 11 12 ] [ 2 5 0 9 12 ] [ 6 10 10 0 3 ] [ 10 10 10 4 0 ]]</p>
 <p>n-of-agents 1000</p>
 <p>random-initial-condition? FALSE</p>
 <p>initial-condition [200 200 200 200 200]</p>
@@ -580,8 +582,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>duration-of-recent 10</p>
 <p>show-recent-history? TRUE</p>
 <p>show-complete-history? TRUE</p>
-<p><strong>仿真结果</strong></p>
-<p>利用abed对五策略博弈进行仿真模拟，得出图4-2的策略分布运动结果，实验设定初始的每个策略浓度都为0.2，经过一段时间的运动之后各个策略分布平均浓度接近纳什均衡。</p>
+<h3 id="仿真结果"><a href="#仿真结果" class="headerlink" title="仿真结果"></a><strong>仿真结果</strong></h3><p>利用abed对五策略博弈进行仿真模拟，得出图4-2的策略分布运动结果，实验设定初始的每个策略浓度都为0.2，经过一段时间的运动之后各个策略分布平均浓度接近纳什均衡。</p>
 <p>+———————————————————————————–+<br>| <img src="/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/image2.png" style="zoom:80%;"> |<br>|                                                                                   |<br>| 图4‑2 Replicator仿真策略分布                                                      |<br>+===================================================================================+<br>+———————————————————————————–+</p>
 <p>图4-3表示各个策略的收益，同样的在经过一段时间的演化之后表现出了周期性的运动。</p>
 <p>+———————————————————————————–+<br>| <img src="/ghy.github.io/2021/07/14/%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85%E7%BB%93%E6%9E%9C20210714%E9%83%AD/image3.png">{width=”3.0730653980752405in” height=”2.1329680664916886in”} |<br>|                                                                                   |<br>| 图4‑3 Replicator仿真策略期望收益                                                  |<br>+===================================================================================+<br>+———————————————————————————–+</p>
@@ -592,7 +593,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  X2                0.213592          0.2112             1.1199%</p>
 <p>  X3                0.214597          0.2112             1.5830%</p>
 <p>  X4                0.096418          0.1001             3.8188%</p>
-<h2 id="X5-0-326749-0-3232-1-0861"><a href="#X5-0-326749-0-3232-1-0861" class="headerlink" title="  X5                0.326749          0.3232             1.0861%"></a>  X5                0.326749          0.3232             1.0861%</h2><p>[[CHART]]{.chart}</p>
+<p>  X5                0.326749          0.3232             1.0861%</p>
+<p>[[CHART]]{.chart}</p>
 <p>NE =</p>
 <p>0.1486 0.2136 0.2146 0.0964 0.3267</p>
 <p>abed_angluar_momentum =</p>
@@ -614,277 +616,18 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
   <entry>
     <title>郭航溢_五维_715</title>
     <url>/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/</url>
-    <content><![CDATA[<ol>
-<li><p> 通过本征向量求分向量随时间变化趋势</p>
-</li>
-<li><p> R =[]; V =[]; Ne=[];   </p>
-</li>
-<li><p> s=perms(1:5);  </p>
-</li>
-<li><p> % for t=1:10000   </p>
-</li>
-<li><p> syms x1 x2 x3 x4 x5   real  </p>
-</li>
-<li><p> payoff_matrix = [ 0 3 4 11 11 ; 5 0 2 11 12 ; 2 5 0 9 12 ; 6 10 10 0 3 ; 10 10 10 4 0 ]  </p>
-</li>
-<li><p> % a= 1   </p>
-</li>
-<li><p> % payoff_matrix = [ 0 0 0 0 a; 1 0 0 0 0 ; 0 1 0 0 0 ; 0 0 1 0 0 ; 0 0 0 1 0 ]  </p>
-</li>
-<li><p> %    payoff_matrix  = [0 -1  1  1 -1;   </p>
-</li>
-<li><p> %                      1  0 -1 -1  1;  </p>
-</li>
-<li><p> %                     -1  1  0  1 -1;  </p>
-</li>
-<li><p> %                     -1  1 -1  0  1;  </p>
-</li>
-<li><p> %                      1 -1  1 -1  0 ]  </p>
-</li>
-<li><p> %         t=randi([1 120],[5 1])  </p>
-</li>
-<li><p> %         payoff_matrix = s(t,:)  </p>
-</li>
-<li><p> Payoff_vector_field_F = payoff_matrix *[x1 x2 x3 x4 x5]&#39;;  </p>
-</li>
-<li><p> mean_U = [x1 x2 x3 x4 x5] * Payoff_vector_field_F;  </p>
-</li>
-<li><p> V_Eq_0 = [x1 x2 x3 x4 x5]&#39;.*(Payoff_vector_field_F - mean_U);  </p>
-</li>
-<li><p> Jac = [ diff(V_Eq_0,&#39;x1&#39;) diff(V_Eq_0,&#39;x2&#39;) diff(V_Eq_0,&#39;x3&#39;) ...  </p>
-</li>
-<li><p> diff(V_Eq_0,&#39;x4&#39;) diff(V_Eq_0,&#39;x5&#39;) ] ;   </p>
-</li>
-<li></li>
-<li><p> S=solve(V_Eq_0);  </p>
-</li>
-<li><p> A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);  </p>
-</li>
-<li><p> s=prod(A,2);  </p>
-</li>
-<li><p> id = find(s~= 0);  </p>
-</li>
-<li><p> if size(id,1)==1  </p>
-</li>
-<li><p> x1=A(id,1); x2=A(id,2); x3=A(id,3); x4=A(id,4); x5=A(id,5);   </p>
-</li>
-<li><p> %                 x1=0.2; x2=0.2; x3=0.2; x4=0.2; x5=0.2;   </p>
-</li>
-<li><p> Jac_at_NE = eval(Jac)  </p>
-</li>
-<li><p> [eigen_vector eigen_value] = eig(Jac_at_NE)  </p>
-</li>
-<li><p> %                           R=[R; payoff_matrix];  </p>
-</li>
-<li><p> %                           V=[V; diag(eigen_value)&#39;];  </p>
-</li>
-<li><p> % %                           Ne=[Ne; s];  </p>
-</li>
-<li><p> %                   figure  </p>
-</li>
-<li><p> %                 v=diag(eigen_vector(:,1));hold on  </p>
-</li>
-<li><p> %                 quiver([1:5]&#39;*0,[1:5]&#39;*0,real(v),imag(v),1)  </p>
-</li>
-<li><p> %                 text(real(v)*1.05,imag(v)*1.05, num2str([1:5]&#39;),&#39;fontsize&#39;,15);axis square;  </p>
-</li>
-<li><p> end  </p>
-</li>
-<li><p> % end  </p>
-</li>
-<li><p> v = eigen_vector(:,3)  </p>
-</li>
-<li><p> [Lmn Tmn]= from_eigenvector_out_am(v)  </p>
-</li>
-<li><p> % save(&#39;manifold5try.mat&#39;, &#39;R&#39;,&#39;V&#39;,&#39;Ne&#39; )  </p>
-</li>
-<li><p> t=0:0.1:30  </p>
-</li>
-<li><p> x=v*exp(0.4294i *t);  </p>
-</li>
-<li><p> xr=real(x)&#39;;  </p>
-</li>
-<li><p> plot(xr,&#39;DisplayName&#39;,&#39;xr&#39;)  </p>
-</li>
-<li><p> plot(xr(:,1),xr(:,2),&#39;.&#39;)  </p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- --&gt;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="一、通过本征向量求分向量随时间变化趋势"><a href="#一、通过本征向量求分向量随时间变化趋势" class="headerlink" title="一、通过本征向量求分向量随时间变化趋势"></a><strong>一、通过本征向量求分向量随时间变化趋势</strong></h1><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">R =\[\]; V =\[\]; Ne=\[\];   </span><br><span class="line"></span><br><span class="line">s=<span class="built_in">perms</span>(<span class="number">1</span>:<span class="number">5</span>);  </span><br><span class="line"></span><br><span class="line">% <span class="keyword">for</span> t=<span class="number">1</span>:<span class="number">10000</span>   </span><br><span class="line"></span><br><span class="line">syms x1 x2 x3 x4 x5   real  </span><br><span class="line"></span><br><span class="line">payoff_matrix = \[ <span class="number">0</span> <span class="number">3</span> <span class="number">4</span> <span class="number">11</span> <span class="number">11</span> ; <span class="number">5</span> <span class="number">0</span> <span class="number">2</span> <span class="number">11</span> <span class="number">12</span> ; <span class="number">2</span> <span class="number">5</span> <span class="number">0</span> <span class="number">9</span> <span class="number">12</span> ; <span class="number">6</span> <span class="number">10</span> <span class="number">10</span> <span class="number">0</span> <span class="number">3</span> ; <span class="number">10</span> <span class="number">10</span> <span class="number">10</span> <span class="number">4</span> <span class="number">0</span> \]  </span><br><span class="line"></span><br><span class="line">% a= <span class="number">1</span>   </span><br><span class="line"></span><br><span class="line">% payoff_matrix = \[ <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> a; <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> ; <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> ; <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> ; <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> \]  </span><br><span class="line"></span><br><span class="line">%    payoff_matrix  = \[<span class="number">0</span> <span class="number">-1</span>  <span class="number">1</span>  <span class="number">1</span> <span class="number">-1</span>;   </span><br><span class="line"></span><br><span class="line">%                      <span class="number">1</span>  <span class="number">0</span> <span class="number">-1</span> <span class="number">-1</span>  <span class="number">1</span>;  </span><br><span class="line"></span><br><span class="line">%                     <span class="number">-1</span>  <span class="number">1</span>  <span class="number">0</span>  <span class="number">1</span> <span class="number">-1</span>;  </span><br><span class="line"></span><br><span class="line">%                     <span class="number">-1</span>  <span class="number">1</span> <span class="number">-1</span>  <span class="number">0</span>  <span class="number">1</span>;  </span><br><span class="line"></span><br><span class="line">%                      <span class="number">1</span> <span class="number">-1</span>  <span class="number">1</span> <span class="number">-1</span>  <span class="number">0</span> \]  </span><br><span class="line"></span><br><span class="line">%         t=<span class="built_in">randi</span>(\[<span class="number">1</span> <span class="number">120</span>\],\[<span class="number">5</span> <span class="number">1</span>\])  </span><br><span class="line"></span><br><span class="line">%         payoff_matrix = <span class="built_in">s</span>(t,:)  </span><br><span class="line"></span><br><span class="line">Payoff_vector_field_F = payoff_matrix \*\[x1 x2 x3 x4 x5\]\<span class="string">&#x27;;  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">mean_U = \[x1 x2 x3 x4 x5\] \* Payoff_vector_field_F;  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">V_Eq_0 = \[x1 x2 x3 x4 x5\]\&#x27;</span>.\*(Payoff_vector_field_F - mean_U);  </span><br><span class="line"></span><br><span class="line">Jac = \[ <span class="built_in">diff</span>(V_Eq_0,\<span class="string">&#x27;x1\&#x27;</span>) <span class="built_in">diff</span>(V_Eq_0,\<span class="string">&#x27;x2\&#x27;</span>) <span class="built_in">diff</span>(V_Eq_0,\<span class="string">&#x27;x3\&#x27;</span>) \...  </span><br><span class="line"></span><br><span class="line"><span class="built_in">diff</span>(V_Eq_0,\<span class="string">&#x27;x4\&#x27;</span>) <span class="built_in">diff</span>(V_Eq_0,\<span class="string">&#x27;x5\&#x27;</span>) \] ;   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">S=<span class="built_in">solve</span>(V_Eq_0);  </span><br><span class="line"></span><br><span class="line">A=<span class="built_in">eval</span>(\[S.x1 S.x2 S.x3 S.x4 S.x5\]);  </span><br><span class="line"></span><br><span class="line">s=<span class="built_in">prod</span>(A,<span class="number">2</span>);  </span><br><span class="line"></span><br><span class="line">id = <span class="built_in">find</span>(s\~= <span class="number">0</span>);  </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">if</span> <span class="title">size</span><span class="params">(id,<span class="number">1</span>)</span></span>==<span class="number">1</span>  </span><br><span class="line"></span><br><span class="line">x1=<span class="built_in">A</span>(id,<span class="number">1</span>); x2=<span class="built_in">A</span>(id,<span class="number">2</span>); x3=<span class="built_in">A</span>(id,<span class="number">3</span>); x4=<span class="built_in">A</span>(id,<span class="number">4</span>); x5=<span class="built_in">A</span>(id,<span class="number">5</span>);   </span><br><span class="line"></span><br><span class="line">%                 x1=<span class="number">0.2</span>; x2=<span class="number">0.2</span>; x3=<span class="number">0.2</span>; x4=<span class="number">0.2</span>; x5=<span class="number">0.2</span>;   </span><br><span class="line"></span><br><span class="line">Jac_at_NE = <span class="built_in">eval</span>(Jac)  </span><br><span class="line"></span><br><span class="line">\[eigen_vector eigen_value\] = <span class="built_in">eig</span>(Jac_at_NE)  </span><br><span class="line"></span><br><span class="line">%                           R=\[R; payoff_matrix\];  </span><br><span class="line"></span><br><span class="line">%                           V=\[V; <span class="built_in">diag</span>(eigen_value)\<span class="string">&#x27;\];  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">% %                           Ne=\[Ne; s\];  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">%                   figure  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">%                 v=diag(eigen_vector(:,1));hold on  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">%                 quiver(\[1:5\]\&#x27;</span>\*<span class="number">0</span>,\[<span class="number">1</span>:<span class="number">5</span>\]\<span class="string">&#x27;\*0,real(v),imag(v),1)  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">%                 text(real(v)\*1.05,imag(v)\*1.05, num2str(\[1:5\]\&#x27;</span>),\<span class="string">&#x27;fontsize\&#x27;</span>,<span class="number">15</span>);axis square;  </span><br><span class="line"></span><br><span class="line">end  </span><br><span class="line"></span><br><span class="line">% end  </span><br><span class="line"></span><br><span class="line">v = <span class="built_in">eigen_vector</span>(:,<span class="number">3</span>)  </span><br><span class="line"></span><br><span class="line">\[Lmn Tmn\]= <span class="built_in">from_eigenvector_out_am</span>(v)  </span><br><span class="line"></span><br><span class="line">% <span class="built_in">save</span>(\<span class="string">&#x27;manifold5try.mat\&#x27;</span>, \<span class="string">&#x27;R\&#x27;</span>,\<span class="string">&#x27;V\&#x27;</span>,\<span class="string">&#x27;Ne\&#x27;</span> )  </span><br><span class="line"></span><br><span class="line">t=<span class="number">0</span>:<span class="number">0.1</span>:<span class="number">30</span>  </span><br><span class="line"></span><br><span class="line">x=v\*<span class="built_in">exp</span>(<span class="number">0.4294</span>i \*t);  </span><br><span class="line"></span><br><span class="line">xr=<span class="built_in">real</span>(x)\<span class="string">&#x27;;  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">plot(xr,\&#x27;</span>DisplayName\<span class="string">&#x27;,\&#x27;</span>xr\<span class="string">&#x27;)  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">plot(xr(:,1),xr(:,2),\&#x27;</span>.\<span class="string">&#x27;)  </span></span><br></pre></td></tr></table></figure>
 
-<ol>
-<li><p> function [Lmn Tmn]= from_eigenvector_out_am(v)  </p>
-</li>
-<li><p> Ndim=length(v);  </p>
-</li>
-<li><p> Lmn=[];  </p>
-</li>
-<li><p> Tmn=zeros(Ndim);  </p>
-</li>
-<li><p> for m=1:Ndim-1  </p>
-</li>
-<li><p> for n=m+1:Ndim   </p>
-</li>
-<li><p> vm=v(m);  </p>
-</li>
-<li><p> vn=v(n);  </p>
-</li>
-<li><p> area_m_n = abs(vm)*abs(vn)*pi*sin(angle(vm)-angle(vn));  </p>
-</li>
-<li><p> Lmn=[Lmn; area_m_n];  </p>
-</li>
-<li><p> Tmn(m,n) = area_m_n;  </p>
-</li>
-<li><p> Tmn(n,m) = -area_m_n;  </p>
-</li>
-<li><p> end;  </p>
-</li>
-<li><p> end  </p>
-</li>
-<li><p> end  </p>
-</li>
-</ol>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function \[Lmn Tmn\]= from_eigenvector_out_am(v)  </span><br><span class="line"></span><br><span class="line">Ndim=length(v);  </span><br><span class="line"></span><br><span class="line">Lmn=\[\];  </span><br><span class="line"></span><br><span class="line">Tmn=zeros(Ndim);  </span><br><span class="line"></span><br><span class="line">for m=1:Ndim-1  </span><br><span class="line"></span><br><span class="line">for n=m+1:Ndim   </span><br><span class="line"></span><br><span class="line">vm=v(m);  </span><br><span class="line"></span><br><span class="line">vn=v(n);  </span><br><span class="line"></span><br><span class="line">area_m\_n = abs(vm)\*abs(vn)\*pi\*sin(angle(vm)-angle(vn));  </span><br><span class="line"></span><br><span class="line">Lmn=\[Lmn; area_m\_n\];  </span><br><span class="line"></span><br><span class="line">Tmn(m,n) = area_m\_n;  </span><br><span class="line"></span><br><span class="line">Tmn(n,m) = -area_m\_n;  </span><br><span class="line"></span><br><span class="line">end;  </span><br><span class="line"></span><br><span class="line">end  </span><br><span class="line"></span><br><span class="line">end  </span><br></pre></td></tr></table></figure>
+
 <p><img src="/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/image1.png">{width=”5.768055555555556in” height=”5.126388888888889in”}</p>
 <p>图为分向量x1与x2的利萨如图形</p>
 <p><img src="/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/image2.png">{width=”5.768055555555556in” height=”5.144444444444445in”}</p>
 <p>图为五个分向量随时间t的变化图</p>
-<p>2.在纳什均衡情况下给予扰动，通过速度求分向量</p>
-<ol>
-<li><p> R =[]; V =[]; Ne=[];   </p>
-</li>
-<li><p> s=perms(1:5);  </p>
-</li>
-<li><p> % for t=1:10000   </p>
-</li>
-<li><p> syms x1 x2 x3 x4 x5   real  </p>
-</li>
-<li><p> payoff_matrix = [ 0 3 4 11 11 ; 5 0 2 11 12 ; 2 5 0 9 12 ; 6 10 10 0 3 ; 10 10 10 4 0 ]  </p>
-</li>
-<li><p> % a= 1   </p>
-</li>
-<li><p> % payoff_matrix = [ 0 0 0 0 a; 1 0 0 0 0 ; 0 1 0 0 0 ; 0 0 1 0 0 ; 0 0 0 1 0 ]  </p>
-</li>
-<li><p> %    payoff_matrix  = [0 -1  1  1 -1;   </p>
-</li>
-<li><p> %                      1  0 -1 -1  1;  </p>
-</li>
-<li><p> %                     -1  1  0  1 -1;  </p>
-</li>
-<li><p> %                     -1  1 -1  0  1;  </p>
-</li>
-<li><p> %                      1 -1  1 -1  0 ]  </p>
-</li>
-<li><p> %         t=randi([1 120],[5 1])  </p>
-</li>
-<li><p> %         payoff_matrix = s(t,:)  </p>
-</li>
-<li><p> Payoff_vector_field_F = payoff_matrix *[x1 x2 x3 x4 x5]&#39;;  </p>
-</li>
-<li><p> mean_U = [x1 x2 x3 x4 x5] * Payoff_vector_field_F;  </p>
-</li>
-<li><p> V_Eq_0 = [x1 x2 x3 x4 x5]&#39;.*(Payoff_vector_field_F - mean_U);  </p>
-</li>
-<li><p> Jac = [ diff(V_Eq_0,&#39;x1&#39;) diff(V_Eq_0,&#39;x2&#39;) diff(V_Eq_0,&#39;x3&#39;) ...  </p>
-</li>
-<li><p> diff(V_Eq_0,&#39;x4&#39;) diff(V_Eq_0,&#39;x5&#39;) ] ;   </p>
-</li>
-<li></li>
-<li><p> S=solve(V_Eq_0);  </p>
-</li>
-<li><p> A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);  </p>
-</li>
-<li><p> s=prod(A,2);  </p>
-</li>
-<li><p> id = find(s~= 0);  </p>
-</li>
-<li><p> if size(id,1)==1  </p>
-</li>
-<li><p> x1=A(id,1); x2=A(id,2); x3=A(id,3); x4=A(id,4); x5=A(id,5);   </p>
-</li>
-<li><p> %                 x1=0.2; x2=0.2; x3=0.2; x4=0.2; x5=0.2;   </p>
-</li>
-<li><p> Jac_at_NE = eval(Jac)  </p>
-</li>
-<li><p> [eigen_vector eigen_value] = eig(Jac_at_NE)  </p>
-</li>
-<li><p> %                           R=[R; payoff_matrix];  </p>
-</li>
-<li><p> %                           V=[V; diag(eigen_value)&#39;];  </p>
-</li>
-<li><p> % %                           Ne=[Ne; s];  </p>
-</li>
-<li><p> %                   figure  </p>
-</li>
-<li><p> %                 v=diag(eigen_vector(:,1));hold on  </p>
-</li>
-<li><p> %                 quiver([1:5]&#39;*0,[1:5]&#39;*0,real(v),imag(v),1)  </p>
-</li>
-<li><p> %                 text(real(v)*1.05,imag(v)*1.05, num2str([1:5]&#39;),&#39;fontsize&#39;,15);axis square;  </p>
-</li>
-<li><p> end  </p>
-</li>
-<li><p> % end  </p>
-</li>
-<li><p> v = eigen_vector(:,3)  </p>
-</li>
-<li><p> [Lmn Tmn]= from_eigenvector_out_am(v)  </p>
-</li>
-<li><p> % save(&#39;manifold5try.mat&#39;, &#39;R&#39;,&#39;V&#39;,&#39;Ne&#39; )  </p>
-</li>
-<li><p> %% 演示沿着本征向量上的偏离，系统运动的特征  </p>
-</li>
-<li><p> c2=eigen_vector(:,3)&#39;    </p>
-</li>
-<li><p> period_para=abs(imag(eigen_value(3,3)));    </p>
-</li>
-<li><p> % 这是举例，沿着第二个本征方向上，偏离了 0.01倍 系统会怎样。  </p>
-</li>
-<li><p> ut=[];  </p>
-</li>
-<li><p> % % % % % % % % % % % % % % % %   for ampt=0:0.01:0.1  </p>
-</li>
-<li><p> ampt=0.01  </p>
-</li>
-<li><p> utt=[];  </p>
-</li>
-<li><p> t2=[[[x1 x2 x3 x4 x5] + ampt*real(c2)]]  </p>
-</li>
-<li><p> tstep = 0.02; %时间步长取0.02  </p>
-</li>
-<li><p> Anoise = 0;  </p>
-</li>
-<li><p> for k=0:tstep:60*pi/period_para  </p>
-</li>
-<li><p> %      x1 = t2(length(t2(:,1)),1); x2 = t2(length(t2(:,1)),2); x3 = t2(length(t2(:,1)),3); x4 = t2(length(t2(:,1)),4);   </p>
-</li>
-<li><p> %      X = [x1 x2 x3 x4]&#39; + eval(V_F)*tstep;   </p>
-</li>
-<li><p> x1 = t2(length(t2(:,1)),1) + eval( V_Eq_0(1))*tstep;   </p>
-</li>
-<li><p> x2 = t2(length(t2(:,1)),2) + eval( V_Eq_0(2))*tstep;  </p>
-</li>
-<li><p> x3 = t2(length(t2(:,1)),3) + eval( V_Eq_0(3))*tstep;  </p>
-</li>
-<li><p> x4 = t2(length(t2(:,1)),4) + eval( V_Eq_0(4))*tstep;   </p>
-</li>
-<li><p> x5 = t2(length(t2(:,1)),5) + eval( V_Eq_0(5))*tstep;  </p>
-</li>
-<li><p> %     X=X/sum(abs(X));  </p>
-</li>
-<li><p> %     t2=[t2; X&#39; k];  </p>
-</li>
-<li><p> %                   tseed = rand(1,4); tNoise0 = (tseed - mean(tseed))*Anoise;  </p>
-</li>
-<li><p> %                   AddNoise0 = [x1 x2 x3 x4] + tNoise0;  </p>
-</li>
-<li><p> %                   AddNoise1 = AddNoise0 / sum(abs(AddNoise0))  </p>
-</li>
-<li><p> %               t2=[t2; AddNoise1 k];  </p>
-</li>
-<li><p> t2=[t2; [x1 x2 x3 x4 x5]];  </p>
-</li>
-<li><p> end  </p>
-</li>
-</ol>
+<h1 id="2-在纳什均衡情况下给予扰动，通过速度求分向量"><a href="#2-在纳什均衡情况下给予扰动，通过速度求分向量" class="headerlink" title="2.在纳什均衡情况下给予扰动，通过速度求分向量"></a>2.在纳什均衡情况下给予扰动，通过速度求分向量</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">R =\[\]; V =\[\]; Ne=\[\];   </span><br><span class="line"></span><br><span class="line">s=perms(1:5);  </span><br><span class="line"></span><br><span class="line">% for t=1:10000   </span><br><span class="line"></span><br><span class="line">syms x1 x2 x3 x4 x5   real  </span><br><span class="line"></span><br><span class="line">payoff_matrix = \[ 0 3 4 11 11 ; 5 0 2 11 12 ; 2 5 0 9 12 ; 6 10 10 0 3 ; 10 10 10 4 0 \]  </span><br><span class="line"></span><br><span class="line">% a= 1   </span><br><span class="line"></span><br><span class="line">% payoff_matrix = \[ 0 0 0 0 a; 1 0 0 0 0 ; 0 1 0 0 0 ; 0 0 1 0 0 ; 0 0 0 1 0 \]  </span><br><span class="line"></span><br><span class="line">%    payoff_matrix  = \[0 -1  1  1 -1;   </span><br><span class="line"></span><br><span class="line">%                      1  0 -1 -1  1;  </span><br><span class="line"></span><br><span class="line">%                     -1  1  0  1 -1;  </span><br><span class="line"></span><br><span class="line">%                     -1  1 -1  0  1;  </span><br><span class="line"></span><br><span class="line">%                      1 -1  1 -1  0 \]  </span><br><span class="line"></span><br><span class="line">%         t=randi(\[1 120\],\[5 1\])  </span><br><span class="line"></span><br><span class="line">%         payoff_matrix = s(t,:)  </span><br><span class="line"></span><br><span class="line">Payoff_vector_field_F = payoff_matrix \*\[x1 x2 x3 x4 x5\]\&#x27;;  </span><br><span class="line"></span><br><span class="line">mean_U = \[x1 x2 x3 x4 x5\] \* Payoff_vector_field_F;  </span><br><span class="line"></span><br><span class="line">V_Eq_0 = \[x1 x2 x3 x4 x5\]\&#x27;.\*(Payoff_vector_field_F - mean_U);  </span><br><span class="line"></span><br><span class="line">Jac = \[ diff(V_Eq_0,\&#x27;x1\&#x27;) diff(V_Eq_0,\&#x27;x2\&#x27;) diff(V_Eq_0,\&#x27;x3\&#x27;) \...  </span><br><span class="line"></span><br><span class="line">diff(V_Eq_0,\&#x27;x4\&#x27;) diff(V_Eq_0,\&#x27;x5\&#x27;) \] ;   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">S=solve(V_Eq_0);  </span><br><span class="line"></span><br><span class="line">A=eval(\[S.x1 S.x2 S.x3 S.x4 S.x5\]);  </span><br><span class="line"></span><br><span class="line">s=prod(A,2);  </span><br><span class="line"></span><br><span class="line">id = find(s\~= 0);  </span><br><span class="line"></span><br><span class="line">if size(id,1)==1  </span><br><span class="line"></span><br><span class="line">x1=A(id,1); x2=A(id,2); x3=A(id,3); x4=A(id,4); x5=A(id,5);   </span><br><span class="line"></span><br><span class="line">%                 x1=0.2; x2=0.2; x3=0.2; x4=0.2; x5=0.2;   </span><br><span class="line"></span><br><span class="line">Jac_at_NE = eval(Jac)  </span><br><span class="line"></span><br><span class="line">\[eigen_vector eigen_value\] = eig(Jac_at_NE)  </span><br><span class="line"></span><br><span class="line">%                           R=\[R; payoff_matrix\];  </span><br><span class="line"></span><br><span class="line">%                           V=\[V; diag(eigen_value)\&#x27;\];  </span><br><span class="line"></span><br><span class="line">% %                           Ne=\[Ne; s\];  </span><br><span class="line"></span><br><span class="line">%                   figure  </span><br><span class="line"></span><br><span class="line">%                 v=diag(eigen_vector(:,1));hold on  </span><br><span class="line"></span><br><span class="line">%                 quiver(\[1:5\]\&#x27;\*0,\[1:5\]\&#x27;\*0,real(v),imag(v),1)  </span><br><span class="line"></span><br><span class="line">%                 text(real(v)\*1.05,imag(v)\*1.05, num2str(\[1:5\]\&#x27;),\&#x27;fontsize\&#x27;,15);axis square;  </span><br><span class="line"></span><br><span class="line">end  </span><br><span class="line"></span><br><span class="line">% end  </span><br><span class="line"></span><br><span class="line">v = eigen_vector(:,3)  </span><br><span class="line"></span><br><span class="line">\[Lmn Tmn\]= from_eigenvector_out_am(v)  </span><br><span class="line"></span><br><span class="line">% save(\&#x27;manifold5try.mat\&#x27;, \&#x27;R\&#x27;,\&#x27;V\&#x27;,\&#x27;Ne\&#x27; )  </span><br><span class="line"></span><br><span class="line">%% 演示沿着本征向量上的偏离，系统运动的特征  </span><br><span class="line"></span><br><span class="line">c2=eigen_vector(:,3)\&#x27;    </span><br><span class="line"></span><br><span class="line">period_para=abs(imag(eigen_value(3,3)));    </span><br><span class="line"></span><br><span class="line">% 这是举例，沿着第二个本征方向上，偏离了 0.01倍 系统会怎样。  </span><br><span class="line"></span><br><span class="line">ut=\[\];  </span><br><span class="line"></span><br><span class="line">% % % % % % % % % % % % % % % %   for ampt=0:0.01:0.1  </span><br><span class="line"></span><br><span class="line">ampt=0.01  </span><br><span class="line"></span><br><span class="line">utt=\[\];  </span><br><span class="line"></span><br><span class="line">t2=\[\[\[x1 x2 x3 x4 x5\] + ampt\*real(c2)\]\]  </span><br><span class="line"></span><br><span class="line">tstep = 0.02; %时间步长取0.02  </span><br><span class="line"></span><br><span class="line">Anoise = 0;  </span><br><span class="line"></span><br><span class="line">for k=0:tstep:60\*pi/period_para  </span><br><span class="line"></span><br><span class="line">%      x1 = t2(length(t2(:,1)),1); x2 = t2(length(t2(:,1)),2); x3 = t2(length(t2(:,1)),3); x4 = t2(length(t2(:,1)),4);   </span><br><span class="line"></span><br><span class="line">%      X = \[x1 x2 x3 x4\]\&#x27; + eval(V_F)\*tstep;   </span><br><span class="line"></span><br><span class="line">x1 = t2(length(t2(:,1)),1) + eval( V_Eq_0(1))\*tstep;   </span><br><span class="line"></span><br><span class="line">x2 = t2(length(t2(:,1)),2) + eval( V_Eq_0(2))\*tstep;  </span><br><span class="line"></span><br><span class="line">x3 = t2(length(t2(:,1)),3) + eval( V_Eq_0(3))\*tstep;  </span><br><span class="line"></span><br><span class="line">x4 = t2(length(t2(:,1)),4) + eval( V_Eq_0(4))\*tstep;   </span><br><span class="line"></span><br><span class="line">x5 = t2(length(t2(:,1)),5) + eval( V_Eq_0(5))\*tstep;  </span><br><span class="line"></span><br><span class="line">%     X=X/sum(abs(X));  </span><br><span class="line"></span><br><span class="line">%     t2=\[t2; X\&#x27; k\];  </span><br><span class="line"></span><br><span class="line">%                   tseed = rand(1,4); tNoise0 = (tseed - mean(tseed))\*Anoise;  </span><br><span class="line"></span><br><span class="line">%                   AddNoise0 = \[x1 x2 x3 x4\] + tNoise0;  </span><br><span class="line"></span><br><span class="line">%                   AddNoise1 = AddNoise0 / sum(abs(AddNoise0))  </span><br><span class="line"></span><br><span class="line">%               t2=\[t2; AddNoise1 k\];  </span><br><span class="line"></span><br><span class="line">t2=\[t2; \[x1 x2 x3 x4 x5\]\];  </span><br><span class="line"></span><br><span class="line">end  </span><br></pre></td></tr></table></figure>
+
 <p><img src="/ghy.github.io/2021/07/15/%E9%83%AD%E8%88%AA%E6%BA%A2-%E4%BA%94%E7%BB%B4-715/image3.png">{width=”6.940340113735783in” height=”3.716666666666667in”}</p>
 <p>图为分向量随时间的变化图</p>
 ]]></content>
@@ -895,12 +638,9 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
   <entry>
     <title>参数分类结果20210716_郭航溢</title>
     <url>/ghy.github.io/2021/07/16/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/</url>
-    <content><![CDATA[<p><strong>参数分类结果20210716 郭航溢</strong></p>
-<p>17万ticks时的角动量散点图。</p>
+    <content><![CDATA[<h1 id="参数分类结果20210716-郭航溢"><a href="#参数分类结果20210716-郭航溢" class="headerlink" title="参数分类结果20210716 郭航溢"></a><strong>参数分类结果20210716 郭航溢</strong></h1><p><strong>17万ticks时的角动量散点图。</strong></p>
 <p><img src="/ghy.github.io/2021/07/16/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/image1.png"></p>
-<p>[[CHART]]{.chart}</p>
-<p>配置参数：</p>
-<p>payoff-matrix [[ 0 3 4 11 11 ] [ 5 0 2 11 12 ] [ 2 5 0 9 12 ] [ 6 10 10 0 3 ] [ 10 10 10 4 0 ]]</p>
+<h2 id="配置参数："><a href="#配置参数：" class="headerlink" title="配置参数："></a>配置参数：</h2><p>payoff-matrix [[ 0 3 4 11 11 ] [ 5 0 2 11 12 ] [ 2 5 0 9 12 ] [ 6 10 10 0 3 ] [ 10 10 10 4 0 ]]</p>
 <p>n-of-agents 1000</p>
 <p>random-initial-condition? FALSE</p>
 <p>initial-condition [200 200 200 200 200]</p>
@@ -929,10 +669,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>Windows10</p>
 <p>Netlogo 6.0.4</p>
 <p>Abed-1pop</p>
-<p>运行时间：</p>
-<p><img src="/ghy.github.io/2021/07/16/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/image2.png"></p>
-<p>实验数据文件名：</p>
-<p>.abed-1pop.tmp Strategy distributions (recent history)717.csv</p>
+<h2 id="运行时间："><a href="#运行时间：" class="headerlink" title="运行时间："></a>运行时间：</h2><p><img src="/ghy.github.io/2021/07/16/%E5%8F%82%E6%95%B0%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C20210716-%E9%83%AD%E8%88%AA%E6%BA%A2/image2.png"></p>
+<h2 id="实验数据文件名："><a href="#实验数据文件名：" class="headerlink" title="实验数据文件名："></a>实验数据文件名：</h2><p>.abed-1pop.tmp Strategy distributions (recent history)717.csv</p>
 <p>（仿真实验数据准备）</p>
 <p>v每一行对应一个支付矩阵的本征值</p>
 <p>R为支付矩阵，每五行为一个支付矩阵</p>
@@ -1007,10 +745,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  -3    0.304701   0.140207   -0.41857   -0.62634   0     0     0     0     0     471</p>
 <p>  -3    1.024977   0.327334   0.047689   ######     0     0     0     0     0     481</p>
 <hr>
-<ol>
-<li> <strong>单复数本征值的情况</strong></li>
-</ol>
-<hr>
+<h2 id="单复数本征值的情况"><a href="#单复数本征值的情况" class="headerlink" title="单复数本征值的情况"></a><strong>单复数本征值的情况</strong></h2><hr>
 <pre><code>            实本征值\      实本征值\      复本征值实部   理论期望
             1              1                             
 </code></pre>
@@ -1023,8 +758,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 </code></pre>
 <hr>
 <p>此外，本征值虚部为0对应的两分量，在他们构成的二维空间中将保持初始方向运动。</p>
-<p><strong>仅第二三分量虚部为零情况：</strong></p>
-<hr>
+<h2 id="仅第二三分量虚部为零情况："><a href="#仅第二三分量虚部为零情况：" class="headerlink" title="仅第二三分量虚部为零情况："></a><strong>仅第二三分量虚部为零情况：</strong></h2><hr>
 <p>  -0.33572   0.294193   0.120763   0.120763   0      0      0      -0.61173   0.611729   1</p>
 <hr>
 <p>  -0.76373   0.565428   0.299149   0.299149   0      0      0      -0.42542   0.425423   8</p>
@@ -1112,8 +846,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  0.628966   -0.69665   -0.06616   -0.06616   0      0      0      -0.15759   0.157593   449</p>
 <p>  -0.45686   -0.2       0.328428   0.328428   0      0      0      -0.17951   0.179508   455</p>
 <p>  0.537819   0.4        -0.26891   -0.26891   0      0      0      -0.13014   0.130142   480</p>
-<h2 id="0-206037-0-07577-0-76514-0-76514-0-0-0-0-17184-0-171837-490"><a href="#0-206037-0-07577-0-76514-0-76514-0-0-0-0-17184-0-171837-490" class="headerlink" title="  0.206037   -0.07577   -0.76514   -0.76514   0      0      0      -0.17184   0.171837   490"></a>  0.206037   -0.07577   -0.76514   -0.76514   0      0      0      -0.17184   0.171837   490</h2><p><strong>仅第四五分量虚部为零情况：</strong></p>
-<hr>
+<p>  0.206037   -0.07577   -0.76514   -0.76514   0      0      0      -0.17184   0.171837   490</p>
+<h2 id="仅第四五分量虚部为零情况："><a href="#仅第四五分量虚部为零情况：" class="headerlink" title="仅第四五分量虚部为零情况："></a><strong>仅第四五分量虚部为零情况：</strong></h2><hr>
 <p>  -0.61935   -0.61935   -0.37974   0.618444   0      -0.32701   0.327011   0      0      4</p>
 <hr>
 <p>  0.561012   0.561012   -0.52202   -0.2       0      -0.43702   0.437023   0      0      5</p>
@@ -1129,7 +863,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  0.362245   0.362245   0.523337   -0.24783   0      -0.48874   0.488745   0      0      39</p>
 <p>  -0.43175   -0.43175   0.411436   0.052058   0      -0.33526   0.335262   0      0      50</p>
 <p>  -0.51844   -0.51844   0.436877   0.4        0      -0.15559   0.155595   0      0      51</p>
-<h6 id="0-2-1-18E-16-0-0-28284-0-282843-0-0-53"><a href="#0-2-1-18E-16-0-0-28284-0-282843-0-0-53" class="headerlink" title="######     0.2        1.18E-16   0      -0.28284   0.282843   0      0      53"></a>######     0.2        1.18E-16   0      -0.28284   0.282843   0      0      53</h6><p>  -0.23592   -0.23592   0.507908   0.163927   0      -0.31317   0.313175   0      0      63</p>
+<p>​    ######    ######    0.2        1.18E-16   0      -0.28284   0.282843   0      0      53</p>
+<p>  -0.23592   -0.23592   0.507908   0.163927   0      -0.31317   0.313175   0      0      63</p>
 <p>  0.221676   0.221676   0.356649   -0.2       0      -0.39082   0.390819   0      0      65</p>
 <p>  -0.37667   -0.37667   0.553347   0.4        0      -0.27382   0.273823   0      0      66</p>
 <p>  -0.04274   -0.04274   -0.17022   0.255702   0      -0.57359   0.573591   0      0      71</p>
@@ -1156,7 +891,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  0.54305    0.54305    -0.58564   -0.10046   0      -0.1773    0.177299   0      0      143</p>
 <p>  -0.33889   -0.33889   0.494908   0.582868   0      -0.08473   0.084733   0      0      150</p>
 <p>  -0.6518    -0.6518    0.103591   -0.2       0      -0.51981   0.519811   0      0      153</p>
-<h6 id="0-4-0-4-0-0-56569-0-565685-0-0-156"><a href="#0-4-0-4-0-0-56569-0-565685-0-0-156" class="headerlink" title="######     0.4        0.4        0      -0.56569   0.565685   0      0      156"></a>######     0.4        0.4        0      -0.56569   0.565685   0      0      156</h6><p>  0.378114   0.378114   -0.4347    -0.52153   0      -0.39172   0.391724   0      0      158</p>
+<p>​    ######     ######    0.4        0.4        0      -0.56569   0.565685   0      0      156</p>
+<p>  0.378114   0.378114   -0.4347    -0.52153   0      -0.39172   0.391724   0      0      158</p>
 <p>  0.325265   0.325265   -0.6       -0.45053   0      -0.32754   0.327545   0      0      159</p>
 <p>  0.023911   0.023911   0.514455   -0.16228   0      -0.55324   0.553237   0      0      162</p>
 <p>  -0.18711   -0.18711   -0.02578   -0.2       0      -0.52473   0.524731   0      0      164</p>
@@ -1239,8 +975,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  -0.41235   -0.41235   0.451805   -0.02711   0      -0.59368   0.593684   0      0      475</p>
 <p>  0.518382   0.518382   -0.23676   ######     0      -0.36979   0.369795   0      0      478</p>
 <p>  -0.12956   -0.12956   0.4        0.05912    0      -0.34429   0.344287   0      0      483</p>
-<h2 id="0-114975-0-114975-0-161361-0-39131-0-0-2506-0-250599-0-0-486"><a href="#0-114975-0-114975-0-161361-0-39131-0-0-2506-0-250599-0-0-486" class="headerlink" title="  0.114975   0.114975   0.161361   -0.39131   0      -0.2506    0.250599   0      0      486"></a>  0.114975   0.114975   0.161361   -0.39131   0      -0.2506    0.250599   0      0      486</h2><p><strong>仅第二五分量虚部为零情况：</strong></p>
-<hr>
+<p>  0.114975   0.114975   0.161361   -0.39131   0      -0.2506    0.250599   0      0      486</p>
+<h2 id="仅第二五分量虚部为零情况："><a href="#仅第二五分量虚部为零情况：" class="headerlink" title="仅第二五分量虚部为零情况："></a><strong>仅第二五分量虚部为零情况：</strong></h2><hr>
 <p>  0.966795   -0.20412   -0.20412   -0.55855   0      0      -0.25495   0.254951   0      3</p>
 <hr>
 <p>  -0.60959   0.150372   0.150372   -0.09115   0      0      -0.30425   0.304249   0      9</p>
@@ -1376,8 +1112,8 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  0.690791   -0.06415   -0.06415   0.237515   0      0      -0.43694   0.436942   0      485</p>
 <p>  -0.48462   0.279547   0.279547   0.525527   0      0      -0.52313   0.52313    0      487</p>
 <p>  -0.25278   0.27177    0.27177    0.309243   0      0      -0.50361   0.503612   0      488</p>
-<h2 id="0-593819-0-09289-0-09289-0-80804-0-0-0-26721-0-267208-0-491"><a href="#0-593819-0-09289-0-09289-0-80804-0-0-0-26721-0-267208-0-491" class="headerlink" title="  0.593819   -0.09289   -0.09289   -0.80804   0      0      -0.26721   0.267208   0      491"></a>  0.593819   -0.09289   -0.09289   -0.80804   0      0      -0.26721   0.267208   0      491</h2><p><strong>2、双复数本征值的情况</strong></p>
-<hr>
+<p>  0.593819   -0.09289   -0.09289   -0.80804   0      0      -0.26721   0.267208   0      491</p>
+<h2 id="双复数本征值的情况"><a href="#双复数本征值的情况" class="headerlink" title="双复数本征值的情况"></a><strong>双复数本征值的情况</strong></h2><hr>
 <pre><code>                     复本征值\   复本征值\   复本征值\               理论期望
                      1实部       2实部       1复部 vs 2复部( 周期)   
 </code></pre>
@@ -1475,7 +1211,7 @@ A=eval([S.x1 S.x2 S.x3 S.x4 S.x5]);
 <p>  0.339058   0.339058   -0.33906   -0.33906   0     -0.32319   0.323193   -0.21323   0.21323    469</p>
 <p>  0.208062   0.208062   -0.30806   -0.30806   0     -0.4072    0.407203   -0.5219    0.521898   477</p>
 <p>  -0.25958   -0.25958   0.359576   0.359576   0     -0.27132   0.271316   -0.37824   0.378235   479</p>
-<h2 id="0-196817-0-196817-0-19682-0-19682-0-0-0926-0-092603-0-17-0-169996-489"><a href="#0-196817-0-196817-0-19682-0-19682-0-0-0926-0-092603-0-17-0-169996-489" class="headerlink" title="  0.196817   0.196817   -0.19682   -0.19682   0     -0.0926    0.092603   -0.17      0.169996   489"></a>  0.196817   0.196817   -0.19682   -0.19682   0     -0.0926    0.092603   -0.17      0.169996   489</h2><p>问题：分量本征值的虚部部分会产生角度以及螺旋轨迹，但是分量本身已经代表了方向，那么分量自己的相位有什么意义</p>
+<p>  0.196817   0.196817   -0.19682   -0.19682   0     -0.0926    0.092603   -0.17      0.169996   489</p>
 ]]></content>
       <categories>
         <category>文档</category>
