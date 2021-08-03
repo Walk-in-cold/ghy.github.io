@@ -57,7 +57,8 @@
 
 <p><img src="/ghy.github.io/2021/07/23/ABED%E6%89%B9%E9%87%8F%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D0723a/image4.png"></p>
 <h3 id="参数设置-A-区"><a href="#参数设置-A-区" class="headerlink" title="参数设置 A 区"></a>参数设置 A 区</h3><hr>
-<h2 id="quot-n-of-revisions-per-tick-quot-10"><a href="#quot-n-of-revisions-per-tick-quot-10" class="headerlink" title="  [&quot;n-of-revisions-per-tick&quot; 10]"></a>  [&quot;n-of-revisions-per-tick&quot; 10]</h2><p>  [&quot;single-sample?&quot; true]</p>
+<p>  [&quot;n-of-revisions-per-tick&quot; 10]</p>
+<p>  [&quot;single-sample?&quot; true]</p>
 <p>  [&quot;tie-breaker&quot; &quot;uniform&quot;]</p>
 <p>  [&quot;random-initial-condition?&quot; true]</p>
 <p>  [&quot;complete-matching?&quot; true]</p>
@@ -293,6 +294,15 @@ resid_residint3col = [resid residint];
       </categories>
   </entry>
   <entry>
+    <title>process_express_to_angluar</title>
+    <url>/ghy.github.io/2021/08/02/process-express-to-angluar/</url>
+    <content><![CDATA[<p>abedfilesname = ‘abed-1pop Strategy distributions (recent history)id292_7-22(2).csv’;<br>[num,txt,raw] = xlsread(abedfilesname);<br>t=length(txt(:,1));<br>u=raw(t+1:length(raw(:,1)),:);<br>v=cell2table(u);<br>ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>psd = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>abed_mean=mean(psd)<br>NE =  [[0.2,0.2,0.2,0.2,0.2]]<br>abed_angluar_momentum = from_N_colExp_out_am(psd,NE)</p>
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+  </entry>
+  <entry>
     <title>new_get_eigensystem_from_5x5</title>
     <url>/ghy.github.io/2021/08/02/new-get-eigensystem-from-5x5/</url>
     <content><![CDATA[<p>% Program: Socexp, WZJ, 20210721<br>% Input:  payoff_matrix   — the payoff<br>% Output: eigen_vector,<br>%         d_eigen_value,<br>%         rest_point_no,<br>%         solutionlist (A)<br>%         of the 5x5 payoff matrix<br>%         of replicator dynamics </p>
@@ -314,15 +324,6 @@ resid_residint3col = [resid residint];
     end
 </code></pre>
 <p>end</p>
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>process_express_to_angluar</title>
-    <url>/ghy.github.io/2021/08/02/process-express-to-angluar/</url>
-    <content><![CDATA[<p>abedfilesname = ‘abed-1pop Strategy distributions (recent history)id292_7-22(2).csv’;<br>[num,txt,raw] = xlsread(abedfilesname);<br>t=length(txt(:,1));<br>u=raw(t+1:length(raw(:,1)),:);<br>v=cell2table(u);<br>ps1 = [v.u1 v.u2 v.u6 v.u10  v.u14 v.u18];<br>psd = [v.u2-v.u6 v.u6-v.u10  v.u10-v.u14 v.u14-v.u18 v.u18];<br>abed_mean=mean(psd)<br>NE =  [[0.2,0.2,0.2,0.2,0.2]]<br>abed_angluar_momentum = from_N_colExp_out_am(psd,NE)</p>
 ]]></content>
       <categories>
         <category>matlab</category>
